@@ -1,0 +1,807 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Abroad Services | Gujjar Travel & Education Consultant</title>
+  <meta name="description"
+    content="Explore our complete Study Abroad services — Visa help, Admission Guidance, University Selection, Scholarships, Pre-departure Support and more.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Hero */
+    .sa-hero {
+      position: relative;
+      padding: 180px 0 110px;
+      background: linear-gradient(135deg, #0a0f2e 0%, #1e3a8a 60%, #0d9488 100%);
+      color: #fff;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .sa-hero::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.03);
+      top: -200px;
+      right: -100px;
+    }
+
+    .sa-hero::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(245, 158, 11, 0.08);
+      bottom: -150px;
+      left: -80px;
+    }
+
+    .sa-hero .breadcrumb {
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .sa-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8rem;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .sa-hero h1 span {
+      color: var(--accent, #f59e0b);
+    }
+
+    .sa-hero p {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 650px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .sa-hero-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .sa-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
+    }
+
+    .sa-btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(245, 158, 11, 0.45);
+    }
+
+    .sa-btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .sa-btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #fff;
+    }
+
+    /* Stats Strip */
+    .sa-stats {
+      background: #fff;
+      padding: 32px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .sa-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      text-align: center;
+    }
+
+    .sa-stat-item h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0a0f2e;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .sa-stat-item p {
+      font-size: 0.88rem;
+      color: #64748b;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    /* Main Content */
+    .sa-content {
+      padding: 90px 0;
+      background: #f8fafc;
+    }
+
+    /* Section heading */
+    .sa-section-intro {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .sa-section-intro .tag {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.1);
+      color: #1e3a8a;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+
+    .sa-section-intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #0a0f2e;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .sa-section-intro h2 span {
+      color: #f59e0b;
+    }
+
+    .sa-section-intro p {
+      font-size: 1.1rem;
+      color: #64748b;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* Services Grid */
+    .sa-services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+    }
+
+    /* Service Card */
+    .sa-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 36px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+      border: 1px solid #f1f5f9;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sa-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      border-radius: 24px 24px 0 0;
+    }
+
+    .sa-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+      border-color: transparent;
+    }
+
+    /* Card color themes */
+    .sa-card.blue::before {
+      background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+    }
+
+    .sa-card.gold::before {
+      background: linear-gradient(90deg, #d97706, #f59e0b);
+    }
+
+    .sa-card.teal::before {
+      background: linear-gradient(90deg, #0d9488, #06b6d4);
+    }
+
+    .sa-card.purple::before {
+      background: linear-gradient(90deg, #7c3aed, #a78bfa);
+    }
+
+    .sa-card.orange::before {
+      background: linear-gradient(90deg, #ea580c, #fb923c);
+    }
+
+    .sa-card.green::before {
+      background: linear-gradient(90deg, #059669, #34d399);
+    }
+
+    .sa-card-icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 22px;
+      color: #fff;
+    }
+
+    .blue .sa-card-icon {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    }
+
+    .gold .sa-card-icon {
+      background: linear-gradient(135deg, #d97706, #f59e0b);
+    }
+
+    .teal .sa-card-icon {
+      background: linear-gradient(135deg, #0d9488, #06b6d4);
+    }
+
+    .purple .sa-card-icon {
+      background: linear-gradient(135deg, #7c3aed, #a78bfa);
+    }
+
+    .orange .sa-card-icon {
+      background: linear-gradient(135deg, #ea580c, #fb923c);
+    }
+
+    .green .sa-card-icon {
+      background: linear-gradient(135deg, #059669, #34d399);
+    }
+
+    .sa-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      color: #0a0f2e;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .sa-card>p {
+      color: #64748b;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    /* Feature list inside card */
+    .sa-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sa-feature-list li {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .sa-feature-list li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .sa-feature-check {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      color: #fff;
+      margin-top: 2px;
+    }
+
+    .blue .sa-feature-check {
+      background: #1e3a8a;
+    }
+
+    .gold .sa-feature-check {
+      background: #d97706;
+    }
+
+    .teal .sa-feature-check {
+      background: #0d9488;
+    }
+
+    .purple .sa-feature-check {
+      background: #7c3aed;
+    }
+
+    .orange .sa-feature-check {
+      background: #ea580c;
+    }
+
+    .green .sa-feature-check {
+      background: #059669;
+    }
+
+    .sa-feature-text h5 {
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: #0a0f2e;
+      margin-bottom: 4px;
+    }
+
+    .sa-feature-text p {
+      font-size: 0.82rem;
+      color: #64748b;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* CTA Bottom */
+    .sa-cta {
+      background: linear-gradient(135deg, #0a0f2e 0%, #1e3a8a 100%);
+      border-radius: 28px;
+      padding: 70px 50px;
+      text-align: center;
+      margin-top: 70px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sa-cta::before {
+      content: '';
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: rgba(245, 158, 11, 0.08);
+      top: -120px;
+      right: -80px;
+    }
+
+    .sa-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .sa-cta p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .sa-hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .sa-services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sa-cta {
+        padding: 50px 24px;
+      }
+
+      .sa-cta h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><img src="assets/logo.png" alt="Gujjar Logo" class="logo-img" /></div>
+        <div class="logo-text"><span class="logo-main">Gujjar</span><span class="logo-sub">Travel & Education</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="services.html#consultancy"><i class="fas fa-book-open"></i> Consultancy</a>
+            <a href="services.html#transfers"><i class="fas fa-exchange-alt"></i> Transfers</a>
+            <a href="services.html#visa"><i class="fas fa-passport"></i> Visa Support</a>
+            <a href="services.html#test-prep"><i class="fas fa-pen-ruler"></i> Test Prep</a>
+          </div>
+        </li>
+        <li><a href="study-abroad.html" class="nav-link active">Study Abroad</a></li>
+        <li><a href="payment.html" class="nav-link">Fee Payment</a></li>
+        <li><a href="exchange.html" class="nav-link">Exchange</a></li>
+        <li><a href="success-story.html" class="nav-link">Success Story</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-outline-sm">Login</a>
+        <a href="register.html" class="btn-primary-sm">Join Community</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="sa-hero">
+    <div class="container" style="position:relative; z-index:2;">
+      <div class="breadcrumb" style="justify-content:center; margin-bottom:24px;">
+        <a href="index.html" style="color:rgba(255,255,255,0.7);">Home</a>
+        <i class="fas fa-chevron-right" style="color:rgba(255,255,255,0.4);"></i>
+        <span style="color:#fff;">Study Abroad</span>
+      </div>
+      <h1>Your Gateway to <span>Global Education</span></h1>
+      <p>From visa applications to pre-departure support, we guide you through every step of your study abroad journey
+        with expert consultancy and personalised care.</p>
+      <div class="sa-hero-btns">
+        <a href="contact.html" class="sa-btn-primary"><i class="fas fa-calendar-check"></i> Book Free Consultation</a>
+        <a href="services.html" class="sa-btn-outline"><i class="fas fa-globe"></i> Explore Countries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="sa-stats">
+    <div class="container">
+      <div class="sa-stats-grid">
+        <div class="sa-stat-item">
+          <h3>30+</h3>
+          <p>Countries Covered</p>
+        </div>
+        <div class="sa-stat-item">
+          <h3>500+</h3>
+          <p>Students Placed</p>
+        </div>
+        <div class="sa-stat-item">
+          <h3>95%</h3>
+          <p>Visa Success Rate</p>
+        </div>
+        <div class="sa-stat-item">
+          <h3>0%</h3>
+          <p>Commission on Payments</p>
+        </div>
+        <div class="sa-stat-item">
+          <h3>10+</h3>
+          <p>Years of Experience</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <section class="sa-content">
+    <div class="container">
+
+      <div class="sa-section-intro">
+        <div class="tag">Our Services</div>
+        <h2>Complete <span>Study Abroad</span> Support</h2>
+        <p>We handle every detail of your international education journey so you can focus on what matters — your
+          future.</p>
+      </div>
+
+      <div class="sa-services-grid">
+
+        <!-- 1. Student Visa Services -->
+        <div class="sa-card blue" id="visa">
+          <div class="sa-card-icon"><i class="fas fa-passport"></i></div>
+          <h3>Student Visa Services</h3>
+          <p>Applying for a student visa can be tough. Our expert consultants offer complete step-by-step guidance to
+            ensure your application is submitted correctly and on time.</p>
+          <ul class="sa-feature-list">
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Visa Application Help</h5>
+                <p>Step-by-step guidance to complete your visa application correctly.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Interview Practice</h5>
+                <p>Mock interviews and tips to boost your confidence for the visa interview.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Document Preparation</h5>
+                <p>Assistance in collecting and organizing all necessary documents.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Ongoing Support</h5>
+                <p>Continuous support and updates on your application status until you get your visa.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 2. Admission Guidance -->
+        <div class="sa-card gold" id="admission">
+          <div class="sa-card-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Admission Guidance</h3>
+          <p>Getting into a good university needs a strong application. Our services provide detailed guidance to make
+            your application stand out from thousands of others.</p>
+          <ul class="sa-feature-list">
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Application Review</h5>
+                <p>Detailed feedback on your application documents to maximize your chances.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Statement of Purpose (SOP) Writing</h5>
+                <p>Guidance on writing an effective and compelling SOP that reflects your true potential.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Recommendation Letters</h5>
+                <p>Help in obtaining and preparing strong recommendation letters.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Interview Practice</h5>
+                <p>Coaching to help you perform well in university admission interviews.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 3. University and Course Selection -->
+        <div class="sa-card teal" id="university">
+          <div class="sa-card-icon"><i class="fas fa-university"></i></div>
+          <h3>University and Course Selection</h3>
+          <p>Picking the right university and course is important for your studies and future career. We provide
+            personalized counseling to find your perfect match.</p>
+          <ul class="sa-feature-list">
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Personalized Counseling</h5>
+                <p>One-on-one sessions to understand your interests, strengths, and career goals.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>University Suggestions</h5>
+                <p>Recommendations based on your preferences, academic background, and career goals.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Application Assistance</h5>
+                <p>Help with completing and submitting applications to various universities worldwide.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 4. Scholarship Assistance -->
+        <div class="sa-card purple" id="scholarship">
+          <div class="sa-card-icon"><i class="fas fa-medal"></i></div>
+          <h3>Scholarship Assistance</h3>
+          <p>Are you worried about how to get scholarships to study abroad? We are here to help you find and apply for
+            funding that matches your profile perfectly.</p>
+          <ul class="sa-feature-list">
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Scholarship Search</h5>
+                <p>Identifying scholarships that match your academic profile and eligibility criteria.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Application Help</h5>
+                <p>Assistance with completing and submitting scholarship applications successfully.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Financial Aid Counseling</h5>
+                <p>Advice on other financial aid options, such as grants, loans, and bursaries.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 5. Pre-departure Support -->
+        <div class="sa-card orange" id="predeparture">
+          <div class="sa-card-icon"><i class="fas fa-plane-departure"></i></div>
+          <h3>Pre-departure Support</h3>
+          <p>Getting ready to study abroad involves many tasks. We're with you every step of the way before you board
+            your flight to your new country of study.</p>
+          <ul class="sa-feature-list">
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Pre-departure Orientation</h5>
+                <p>A thorough briefing so you know exactly what to expect when you arrive.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Travel Arrangements</h5>
+                <p>Help with booking flights and arranging airport pickups at your destination.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Packing Lists</h5>
+                <p>Detailed lists to ensure you have everything you need for your new life abroad.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Cultural Adaptation Guidance</h5>
+                <p>Tips and insights to help you adjust smoothly to the culture, lifestyle, and social norms of your
+                  destination.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 6. Students Will Need -->
+        <div class="sa-card green" id="requirements">
+          <div class="sa-card-icon"><i class="fas fa-clipboard-list"></i></div>
+          <h3>Students Will Need</h3>
+          <p>To successfully apply to universities and secure your student visa, you will typically need to have the
+            following documents and requirements ready.</p>
+          <ul class="sa-feature-list">
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Proof of Enrollment</h5>
+                <p>Official acceptance/offer letter from your chosen university.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Proof of Financial Ability</h5>
+                <p>To afford the cost of travel, course tuition fees, and living expenses.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Valid Six-Month Passport</h5>
+                <p>Passport must be valid at least six months beyond the length of stay.</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>English Language Proficiency</h5>
+                <p>Evidence of English proficiency may be required (IELTS/TOEFL/PTE).</p>
+              </div>
+            </li>
+            <li>
+              <div class="sa-feature-check"><i class="fas fa-check"></i></div>
+              <div class="sa-feature-text">
+                <h5>Medical Report & Health Examination</h5>
+                <p>A health check-up certificate as required by many destination countries.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- end services grid -->
+
+      <!-- CTA -->
+      <div class="sa-cta">
+        <h2>Ready to Begin Your Study Abroad Journey?</h2>
+        <p>Book a free consultation today and let our expert team guide you from the very first step right up to your
+          arrival at your new university.</p>
+        <a href="contact.html" class="sa-btn-primary" style="font-size:1.1rem; padding:16px 40px;">
+          <i class="fas fa-calendar-check"></i> Book Free Consultation
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo"><i class="fas fa-graduation-cap"></i>
+              <div><span>Gujjar Travel &</span><span>Education Consultant</span></div>
+            </div>
+            <p>Your trusted partner in achieving global education goals. A proud project of Gujjar Travel and Tour Group
+              of Companies.</p>
+            <div class="footer-socials">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>21-C Trust Plaza Model Town Rd,
+                Model Town, Gujranwala</span></div>
+            <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+92 3390414001</span></div>
+            <div class="footer-contact-item"><i
+                class="fas fa-envelope"></i><span>gujjar.travel.and.education.consultant@hotmail.com</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>2026 Gujjar Travel & Education Consultant. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <a href="https://wa.me/923390414001" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+</body>
+
+</html>

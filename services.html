@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | Gujjar Travel & Education Consultant</title>
+  <meta name="description"
+    content="Explore our complete range of educational services including academic planning, university admissions, institutional transfers, visa support, and test preparation." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .services-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+
+    .tab-btn {
+      padding: 10px 24px;
+      border: 2px solid var(--gray-200);
+      background: var(--white);
+      border-radius: var(--radius-full);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      color: var(--text-secondary);
+    }
+
+    .tab-btn.active,
+    .tab-btn:hover {
+      background: var(--blue-mid);
+      border-color: var(--blue-mid);
+      color: var(--white);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .detail-grid.reverse {
+      direction: rtl;
+    }
+
+    .detail-grid.reverse>* {
+      direction: ltr;
+    }
+
+    .detail-visual {
+      background: var(--grad-hero);
+      border-radius: var(--radius-xl);
+      padding: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 340px;
+    }
+
+    .detail-visual i {
+      font-size: 8rem;
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    .detail-visual .icon-center {
+      font-size: 6rem;
+      color: var(--accent-light);
+    }
+
+    .detail-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .detail-text p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px;
+      background: var(--off-white);
+      border-radius: var(--radius-md);
+      border-left: 3px solid;
+    }
+
+    .feature-item.blue {
+      border-color: var(--blue-mid);
+    }
+
+    .feature-item.teal {
+      border-color: var(--teal);
+    }
+
+    .feature-item.gold {
+      border-color: var(--accent);
+    }
+
+    .feature-item i {
+      font-size: 1.1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .feature-item.blue i {
+      color: var(--blue-mid);
+    }
+
+    .feature-item.teal i {
+      color: var(--teal);
+    }
+
+    .feature-item.gold i {
+      color: var(--accent);
+    }
+
+    .feature-item h5 {
+      font-weight: 700;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+
+    .feature-item p {
+      color: var(--text-secondary);
+      font-size: 0.87rem;
+      margin: 0;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      position: relative;
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--grad-primary);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .process-step h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .process-step p {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    /* ===== PREMIUM COUNTRY CARDS (MODERN STYLE) ===== */
+    .countries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px 0;
+    }
+
+    .country-card {
+      position: relative;
+      height: 380px;
+      border-radius: 40px;
+      overflow: hidden;
+      background: #0a0f2e;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      display: block;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .country-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .country-card .card-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+      z-index: 1;
+      filter: brightness(0.85);
+    }
+
+    .country-card:hover .card-img {
+      transform: scale(1.1);
+      filter: brightness(1);
+    }
+
+    .country-card .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 15, 46, 0.95) 10%, rgba(10, 15, 46, 0.4) 45%, transparent 100%);
+      z-index: 2;
+    }
+
+    .country-card .card-badge {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      z-index: 5;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .country-card .card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px;
+      z-index: 10;
+      transition: transform 0.4s ease;
+    }
+
+    .country-card .country-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: white;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .country-card .card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .country-card:hover .card-btn {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+      .countries-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+      }
+
+      .country-card {
+        height: 320px;
+      }
+    }
+
+
+    /* Old image-based card styles kept for UK, Qatar, Oman etc */
+
+
+
+
+
+
+    .country-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 15, 46, 0.95) 0%, rgba(10, 15, 46, 0) 60%);
+      z-index: 1;
+    }
+
+    .country-card-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .country-name {
+      color: var(--white);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .country-unis {
+      color: var(--accent-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .countries-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 14px;
+      }
+
+      .country-card {
+        height: 170px;
+      }
+
+      .card-flag {
+        font-size: 2.8rem;
+      }
+
+      .card-front-name {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* ANIMATED VISUAL COMPONENTS */
+    .anim-visual {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-xl);
+      background: var(--grad-hero);
+    }
+
+    /* Unique Backgrounds */
+    .anim-transfer {
+      background: linear-gradient(135deg, #022c22, #0f766e);
+    }
+
+    .anim-visa {
+      background: linear-gradient(135deg, #2e1065, #5b21b6);
+    }
+
+    .anim-test {
+      background: linear-gradient(135deg, #7c2d12, #ea580c);
+    }
+
+    .anim-bg-element {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(40px);
+      opacity: 0.6;
+      animation: float 6s ease-in-out infinite alternate;
+    }
+
+    /* Transfer Glowing Orbs */
+    .ar-1 {
+      width: 40%;
+      height: 40%;
+      background: #34d399;
+      top: 10%;
+      left: 10%;
+    }
+
+    .ar-2 {
+      width: 50%;
+      height: 50%;
+      background: #06b6d4;
+      bottom: 10%;
+      right: 10%;
+      animation-delay: -3s;
+    }
+
+    /* Visa Glowing Orbs */
+    .av-1 {
+      width: 40%;
+      height: 40%;
+      background: #a78bfa;
+      top: 20%;
+      right: 10%;
+    }
+
+    .av-2 {
+      width: 45%;
+      height: 45%;
+      background: #f472b6;
+      bottom: 10%;
+      left: 10%;
+      animation-delay: -2s;
+    }
+
+    /* Test Prep Glowing Orbs */
+    .at-1 {
+      width: 35%;
+      height: 35%;
+      background: #fcd34d;
+      top: 15%;
+      left: 20%;
+    }
+
+    .at-2 {
+      width: 50%;
+      height: 50%;
+      background: #f43f5e;
+      bottom: -10%;
+      right: -10%;
+      animation-delay: -4s;
+    }
+
+    .anim-center-object {
+      position: relative;
+      z-index: 10;
+      width: 160px;
+      height: 160px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .anim-center-object i {
+      font-size: 4.5rem;
+      color: var(--white);
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    }
+
+    .anim-floating-icon {
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      background: var(--white);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      z-index: 11;
+      font-weight: 900;
+    }
+
+    /* Dynamic Animations */
+    @keyframes spin-slow {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes bounce-subtle {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes pulse-glow {
+
+      0%,
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+      }
+
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+      }
+    }
+
+    .f-icon-1 {
+      top: 20%;
+      left: 15%;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .f-icon-2 {
+      top: 15%;
+      right: 18%;
+      animation: float 5s ease-in-out infinite 0.5s;
+    }
+
+    .f-icon-3 {
+      bottom: 20%;
+      right: 15%;
+      animation: float 4.5s ease-in-out infinite 1s;
+    }
+
+    .f-icon-4 {
+      bottom: 18%;
+      left: 22%;
+      animation: float 5.5s ease-in-out infinite 0.2s;
+    }
+
+    @media (max-width: 768px) {
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-grid.reverse {
+        direction: ltr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- PRELOADER -->
+  <div id="preloader" class="preloader">
+    <div class="loader-logo">
+      <div class="loader-ring"></div>
+      <div class="loader-ring-inner"></div>
+      <div class="loader-text">GTE</div>
+    </div>
+    <p class="loader-tagline">Loading Services...</p>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><img src="assets/logo.png" alt="Gujjar Logo" class="logo-img" /></div>
+        <div class="logo-text"><span class="logo-main">Gujjar</span><span class="logo-sub">Travel & Education</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="nav-link active">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="#consultancy"><i class="fas fa-book-open"></i> Consultancy</a>
+            <a href="#transfers"><i class="fas fa-exchange-alt"></i> Transfers</a>
+            <a href="#visa"><i class="fas fa-passport"></i> Visa Support</a>
+            <a href="#test-prep"><i class="fas fa-pen-ruler"></i> Test Prep</a>
+          </div>
+        </li>
+        <li><a href="payment.html" class="nav-link">Fee Payment</a></li>
+        <li><a href="exchange.html" class="nav-link">Exchange</a></li>
+        <li><a href="success-story.html" class="nav-link">Success Story</a></li>
+        <li><a href="study-abroad.html" class="nav-link">Study Abroad</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-outline-sm">Login</a>
+        <a href="register.html" class="btn-primary-sm">Join Community</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-content container">
+      <span class="section-tag">Our Expertise</span>
+      <h1>Complete <span class="gradient-text">Education Services</span></h1>
+      <p>From academic planning to visa support — every service you need to succeed globally.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES TABS -->
+  <section class="section-padding" style="background: var(--white);">
+    <div class="container">
+      <div class="services-tabs">
+        <button class="tab-btn active" onclick="showTab('consultancy')" id="tab-consultancy">📚 Consultancy</button>
+        <button class="tab-btn" onclick="showTab('transfers')" id="tab-transfers">🔄 Transfers</button>
+        <button class="tab-btn" onclick="showTab('visa')" id="tab-visa">🛂 Visa Support</button>
+        <button class="tab-btn" onclick="showTab('test-prep')" id="tab-test-prep">✏️ Test Prep</button>
+        <button class="tab-btn" onclick="showTab('countries')" id="tab-countries">🌍 Countries</button>
+      </div>
+
+      <!-- CONSULTANCY TAB -->
+      <div class="tab-content active" id="consultancy">
+        <div class="detail-grid" data-aos="fade-up">
+          <img src="assets/consultancy.jpg" alt="Our Services"
+            style="width: 100%; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);" />
+          <div class="detail-text">
+            <span class="section-tag">Consultancy Services</span>
+            <h2>Your Personalized Academic Roadmap</h2>
+            <p>Our expert consultants work closely with you to understand your goals, strengths, and aspirations — then
+              craft a personalized plan to get you into the right university, in the right country, for the right
+              program.</p>
+            <div class="feature-list">
+              <div class="feature-item blue">
+                <i class="fas fa-map-marked-alt"></i>
+                <div>
+                  <h5>Academic Planning</h5>
+                  <p>Career-aligned university selection and subject choice guidance tailored to your goals.</p>
+                </div>
+              </div>
+              <div class="feature-item teal">
+                <i class="fas fa-university"></i>
+                <div>
+                  <h5>University Admissions</h5>
+                  <p>End-to-end application support for top-tier international universities worldwide.</p>
+                </div>
+              </div>
+              <div class="feature-item gold">
+                <i class="fas fa-file-alt"></i>
+                <div>
+                  <h5>Document Guidance</h5>
+                  <p>Professional SOP writing, LOR formatting, and transcript evaluation assistance.</p>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary"><i class="fas fa-calendar-check"></i> Book Free Consultation</a>
+          </div>
+        </div>
+        <!-- Process -->
+        <div class="section-header" style="margin-top:60px;">
+          <span class="section-tag">How It Works</span>
+          <h2 class="section-title">Our Simple <span class="gradient-text">4-Step Process</span></h2>
+        </div>
+        <div class="process-steps">
+          <div class="process-step" data-aos="fade-up">
+            <div class="step-num">1</div>
+            <h4>Free Consultation</h4>
+            <p>Meet with our expert team to discuss your goals and aspirations.</p>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-num">2</div>
+            <h4>Profile Assessment</h4>
+            <p>We evaluate your academic background, scores, and preferences.</p>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+            <div class="step-num">3</div>
+            <h4>University Shortlisting</h4>
+            <p>Get a curated list of best-fit universities and programs for you.</p>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+            <div class="step-num">4</div>
+            <h4>Application & Admission</h4>
+            <p>We handle the paperwork and guide you to your offer letter.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRANSFERS TAB -->
+      <div class="tab-content" id="transfers">
+        <div class="detail-grid reverse" data-aos="fade-up">
+          <div class="anim-visual anim-transfer">
+            <div class="anim-bg-element ar-1"></div>
+            <div class="anim-bg-element ar-2"></div>
+            <div class="anim-center-object" style="animation: spin-slow 15s linear infinite;">
+              <i class="fas fa-globe-americas"></i>
+            </div>
+            <div class="anim-floating-icon f-icon-1"><i class="fas fa-university" style="color: #0d9488;"></i></div>
+            <div class="anim-floating-icon f-icon-2"><i class="fas fa-exchange-alt" style="color: #059669;"></i></div>
+            <div class="anim-floating-icon f-icon-3"><i class="fas fa-plane-departure" style="color: #0891b2;"></i>
+            </div>
+            <div class="anim-floating-icon f-icon-4"><i class="fas fa-user-graduate" style="color: #0284c7;"></i></div>
+          </div>
+          <div class="detail-text">
+            <span class="section-tag">Transfer Services</span>
+            <h2>Move Universities Without Losing a Step</h2>
+            <p>Whether you want to transfer for better opportunities, personal reasons, or academic excellence — we make
+              the institutional transfer process seamless, preserving your credits and keeping your academic timeline on
+              track.</p>
+            <div class="feature-list">
+              <div class="feature-item blue">
+                <i class="fas fa-exchange-alt"></i>
+                <div>
+                  <h5>Institutional Transfers</h5>
+                  <p>Smooth transitions from one university to another, domestically or internationally.</p>
+                </div>
+              </div>
+              <div class="feature-item teal">
+                <i class="fas fa-coins"></i>
+                <div>
+                  <h5>Credit Evaluation</h5>
+                  <p>Expert analysis to transfer your earned credits to the new institution, saving time and money.</p>
+                </div>
+              </div>
+              <div class="feature-item gold">
+                <i class="fas fa-home"></i>
+                <div>
+                  <h5>Settling In Support</h5>
+                  <p>Guidance on accommodation, local orientation, and campus integration at your new university.</p>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary"><i class="fas fa-phone-alt"></i> Talk to a Transfer Expert</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VISA TAB -->
+      <div class="tab-content" id="visa">
+        <div class="detail-grid" data-aos="fade-up">
+          <div class="anim-visual anim-visa">
+            <div class="anim-bg-element av-1"></div>
+            <div class="anim-bg-element av-2"></div>
+            <div class="anim-center-object" style="animation: bounce-subtle 4s ease-in-out infinite;">
+              <i class="fas fa-passport"></i>
+            </div>
+            <div class="anim-floating-icon f-icon-1"><i class="fas fa-stamp" style="color: #10b981;"></i></div>
+            <div class="anim-floating-icon f-icon-2"><i class="fas fa-plane" style="color: #8b5cf6;"></i></div>
+            <div class="anim-floating-icon f-icon-3"><i class="fas fa-file-signature" style="color: #6366f1;"></i></div>
+            <div class="anim-floating-icon f-icon-4"><i class="fas fa-check-circle" style="color: #10b981;"></i></div>
+          </div>
+          <div class="detail-text">
+            <span class="section-tag">Visa Support</span>
+            <h2>Navigate Visa Requirements With Confidence</h2>
+            <p>Visa applications can be complex and stressful. Our specialists have in-depth knowledge of student visa
+              requirements for every major destination country. We guide you through every form, document, and interview
+              prep.</p>
+            <div class="feature-list">
+              <div class="feature-item blue">
+                <i class="fas fa-passport"></i>
+                <div>
+                  <h5>Student Visa Applications</h5>
+                  <p>Step-by-step guidance for UK, Canada, Australia, USA, Germany, and more.</p>
+                </div>
+              </div>
+              <div class="feature-item teal">
+                <i class="fas fa-sync-alt"></i>
+                <div>
+                  <h5>Permit Updates</h5>
+                  <p>Expert help updating study permits during institutional transfers.</p>
+                </div>
+              </div>
+              <div class="feature-item gold">
+                <i class="fas fa-clipboard-check"></i>
+                <div>
+                  <h5>Document Review</h5>
+                  <p>Thorough review of all visa documents to minimize rejection risk.</p>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary"><i class="fas fa-shield-halved"></i> Get Visa Guidance</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEST PREP TAB -->
+      <div class="tab-content" id="test-prep">
+        <div class="detail-grid reverse" data-aos="fade-up">
+          <div class="anim-visual anim-test">
+            <div class="anim-bg-element at-1"></div>
+            <div class="anim-bg-element at-2"></div>
+            <div class="anim-center-object" style="animation: pulse-glow 3s infinite;">
+              <i class="fas fa-book-reader"></i>
+            </div>
+            <div class="anim-floating-icon f-icon-1"><i class="fas fa-pen-nib" style="color: #ea580c;"></i></div>
+            <div class="anim-floating-icon f-icon-2" style="color: #f59e0b; font-size:1.6rem;">A+</div>
+            <div class="anim-floating-icon f-icon-3"><i class="fas fa-headphones-alt" style="color: #9a3412;"></i></div>
+            <div class="anim-floating-icon f-icon-4"><i class="fas fa-chart-line" style="color: #ef4444;"></i></div>
+          </div>
+          <div class="detail-text">
+            <span class="section-tag">Test Preparation</span>
+            <h2>Ace Your English Proficiency Tests</h2>
+            <p>Most international universities require English proficiency proof. Our test preparation resources and
+              expert guidance help you meet and exceed the score requirements for your target university.</p>
+            <div class="feature-list">
+              <div class="feature-item blue">
+                <i class="fas fa-headphones"></i>
+                <div>
+                  <h5>IELTS Preparation</h5>
+                  <p>Comprehensive resources for all 4 IELTS bands: Listening, Reading, Writing, Speaking.</p>
+                </div>
+              </div>
+              <div class="feature-item teal">
+                <i class="fas fa-laptop"></i>
+                <div>
+                  <h5>TOEFL Preparation</h5>
+                  <p>Practice tests, tips, and strategies to maximize your TOEFL iBT score.</p>
+                </div>
+              </div>
+              <div class="feature-item gold">
+                <i class="fas fa-calculator"></i>
+                <div>
+                  <h5>SAT / GRE / GMAT</h5>
+                  <p>Expert resources for standardized tests required by US and other universities.</p>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary"><i class="fas fa-book-open"></i> Start Preparation</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COUNTRIES TAB -->
+      <div class="tab-content" id="countries">
+        <div class="section-header">
+          <h2 class="section-title">We Help You Study in <span class="gradient-text">30+ Countries</span></h2>
+          <p class="section-desc">Click any country card to explore our services. Our global network opens doors
+            worldwide.</p>
+        </div>
+        <style>
+          .countries-grid a.country-card:hover {
+            transform: translateY(-15px);
+          }
+
+          .countries-grid a.country-card:hover img {
+            transform: scale(1.08);
+          }
+        </style>
+        <div class="countries-grid" id="countriesGrid">
+          <!-- UK -->
+          <a href="study-in-uk.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=800&auto=format&fit=crop" alt="United Kingdom" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Top Choice</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">United Kingdom</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- USA -->
+          <a href="study-in-usa.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?q=80&w=800&auto=format&fit=crop" alt="USA" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1485738422979-f5c462d49f74?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Elite</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">USA</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Canada -->
+          <a href="study-in-canada.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=800&auto=format&fit=crop" alt="Canada" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Top Choice</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Canada</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Australia -->
+          <a href="study-in-australia.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=800&auto=format&fit=crop" alt="Australia" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Top Choice</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Australia</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Germany -->
+          <a href="study-in-germany.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop" alt="Germany" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Free Tuition</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Germany</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Italy -->
+          <a href="study-in-italy.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800&auto=format&fit=crop" alt="Italy" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Elite</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Italy</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Turkey -->
+          <a href="study-in-turkey.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=800&auto=format&fit=crop" alt="Turkey" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Popular</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Turkey</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Qatar -->
+          <a href="study-in-qatar.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop" alt="Qatar" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Scholarship</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Qatar</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Oman -->
+          <a href="study-in-oman.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1580169980114-ccd0babfa840?q=80&w=800&auto=format&fit=crop" alt="Oman" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1580169980114-ccd0babfa840?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Trending</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Oman</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- UAE -->
+          <a href="study-in-uae.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800&auto=format&fit=crop" alt="UAE" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Elite</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">UAE</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Malaysia -->
+          <a href="study-in-malaysia.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=800&auto=format&fit=crop" alt="Malaysia" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Popular</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Malaysia</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- France -->
+          <a href="study-in-france.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop" alt="France" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Elite</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">France</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Japan -->
+          <a href="study-in-japan.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop" alt="Japan" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Elite</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Japan</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- China -->
+          <a href="study-in-china.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=800&auto=format&fit=crop" alt="China" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Scholarship</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">China</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Kazakhstan -->
+          <a href="study-in-kazakhstan.html" class="country-card">
+            <img src="assets/countries/kazakhstan.jpg" alt="Kazakhstan" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1542452255191-2ca3f237fb38?q=80&w=1000&auto=format&fit=crop'">
+            <div class="card-badge">Affordable</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Kazakhstan</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Uzbekistan -->
+          <a href="study-in-uzbekistan.html" class="country-card">
+            <img src="assets/countries/uzbekistan.jpg" alt="Uzbekistan" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1528154291023-a6525fabe5b4?q=80&w=1000&auto=format&fit=crop'">
+            <div class="card-badge">Affordable</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Uzbekistan</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Kyrgyzstan -->
+          <a href="study-in-kyrgyzstan.html" class="country-card">
+            <img src="assets/countries/kyrgyzstan.jpg" alt="Kyrgyzstan" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1569154941061-e231b474254b?q=80&w=1000&auto=format&fit=crop'">
+            <div class="card-badge">Affordable</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Kyrgyzstan</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Russia -->
+          <a href="study-in-russia.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?q=80&w=800&auto=format&fit=crop" alt="Russia" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1513326738677-b964603b136d?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Popular</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Russia</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Romania -->
+          <a href="study-in-romania.html" class="country-card">
+            <img src="assets/countries/romania.jpg" alt="Romania" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1555555555555?q=80&w=1000&auto=format&fit=crop'">
+            <div class="card-badge">Scholarship</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Romania</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Portugal -->
+          <a href="study-in-portugal.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800&auto=format&fit=crop" alt="Portugal" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Schengen</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Portugal</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Sweden -->
+          <a href="study-in-sweden.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1509356843151-3e7d96241e11?q=80&w=800&auto=format&fit=crop" alt="Sweden" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1509356843151-3e7d96241e11?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Schengen</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Sweden</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Denmark -->
+          <a href="study-in-denmark.html" class="country-card">
+            <img src="assets/countries/denmark.jpg" alt="Denmark" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1000&auto=format&fit=crop'">
+            <div class="card-badge">Elite</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Denmark</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Finland -->
+          <a href="study-in-finland.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=800&auto=format&fit=crop" alt="Finland" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Elite</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Finland</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Poland -->
+          <a href="study-in-poland.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1519197924294-4ba991a11128?q=80&w=800&auto=format&fit=crop" alt="Poland" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1519197924294-4ba991a11128?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Trending</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Poland</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Ireland -->
+          <a href="study-in-ireland.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=800&auto=format&fit=crop" alt="Ireland" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Elite</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Ireland</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Netherlands -->
+          <a href="study-in-netherlands.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=800&auto=format&fit=crop" alt="Netherlands" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Popular</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Netherlands</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+
+          <!-- Switzerland -->
+          <a href="study-in-switzerland.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?q=80&w=800&auto=format&fit=crop" alt="Switzerland" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1527668752968-14dc70a27c95?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Elite</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Switzerland</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Luxembourg -->
+          <a href="study-in-luxembourg.html" class="country-card">
+            <img src="assets/countries/luxembourg.jpg" alt="Luxembourg" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1000&auto=format&fit=crop'">
+            <div class="card-badge">Elite</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Luxembourg</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Belgium -->
+          <a href="study-in-belgium.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=800&auto=format&fit=crop" alt="Belgium" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">Elite</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Belgium</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <!-- Cyprus -->
+          <a href="study-in-cyprus.html" class="country-card">
+            <img src="assets/countries/cyprus.jpg" alt="Cyprus" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1596706795079-ba0f592ebfdd?q=80&w=1000&auto=format&fit=crop'">
+            <div class="card-badge">Trending</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Cyprus</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+          <a href="study-in-europe.html" class="country-card">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop" alt="Europe" class="card-img"
+              onerror="this.src='https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop'">
+            <div class="card-badge">All EU</div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <h3 class="country-name">Europe</h3>
+              <div class="card-btn">Explore Details <i class="fas fa-arrow-right"></i></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo"><i class="fas fa-graduation-cap"></i>
+              <div><span>Gujjar Travel &</span><span>Education Consultant</span></div>
+            </div>
+            <p>Your trusted partner in achieving global education goals.</p>
+            <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
+                  class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i
+                  class="fab fa-youtube"></i></a></div>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="payment.html">Fee Payment</a></li>
+              <li><a href="exchange.html">Exchange</a></li>
+              <li><a href="success-story.html">Success Story</a></li>
+              <li><a href="study-abroad.html">Study Abroad</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#consultancy">Academic Planning</a></li>
+              <li><a href="#consultancy">University Admissions</a></li>
+              <li><a href="#transfers">Transfers</a></li>
+              <li><a href="#visa">Visa Support</a></li>
+              <li><a href="#test-prep">Test Preparation</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>21-C Trust Plaza، Model Town Rd,
+                Model Town, Gujranwala</span></div>
+            <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+92 3390414001</span></div>
+            <div class="footer-contact-item"><i
+                class="fas fa-envelope"></i><span>gujjar.travel.and.education.consultant@hotmail.com</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Gujjar Travel & Education Consultant. A Project of <strong>Gujjar Travel and Tour Group of
+            Companies</strong>.</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+  <script src="js/main.js"></script>
+  <script>
+    function showTab(name) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(name)?.classList.add('active');
+      document.getElementById('tab-' + name)?.classList.add('active');
+    }
+  </script>
+  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+  <a href="https://wa.me/923390414001" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+
+
+</html>

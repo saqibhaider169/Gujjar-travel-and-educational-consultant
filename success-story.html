@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Success Story | Gujjar Travel & Education Consultant</title>
+  <meta name="description"
+    content="Explore the fresh success stories of students who achieved their dreams of studying abroad with Gujjar Travel & Education Consultant." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* SUCCESS STORY PAGE SPECIFIC STYLES */
+    .success-stories-section {
+      background: var(--off-white);
+      padding: 100px 0;
+    }
+
+    .month-header {
+      margin-top: 60px;
+      margin-bottom: 40px;
+      position: relative;
+      text-align: center;
+    }
+
+    .month-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      display: inline-block;
+      position: relative;
+      padding: 0 20px;
+      background: var(--off-white);
+      z-index: 2;
+    }
+
+    .month-header::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.2), transparent);
+      z-index: 1;
+    }
+
+    .success-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .success-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 12px;
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    .success-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      border-color: rgba(30, 58, 138, 0.2);
+    }
+
+    .success-img-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      aspect-ratio: 1 / 1;
+      background: var(--off-white);
+    }
+
+    .success-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .success-card:hover .success-img {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .success-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .month-header h3 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="preloader" class="preloader">
+    <div class="loader-logo">
+      <div class="loader-ring"></div>
+      <div class="loader-ring-inner"></div>
+      <div class="loader-text">GTE</div>
+    </div>
+    <p class="loader-tagline">Loading Success Stories...</p>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><img src="assets/logo.png" alt="Gujjar Logo" class="logo-img" /></div>
+        <div class="logo-text"><span class="logo-main">Gujjar</span><span class="logo-sub">Travel & Education</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="services.html#consultancy"><i class="fas fa-book-open"></i> Consultancy</a>
+            <a href="services.html#transfers"><i class="fas fa-exchange-alt"></i> Transfers</a>
+            <a href="services.html#visa"><i class="fas fa-passport"></i> Visa Support</a>
+            <a href="services.html#test-prep"><i class="fas fa-pen-ruler"></i> Test Prep</a>
+          </div>
+        </li>
+        <li><a href="payment.html" class="nav-link">Fee Payment</a></li>
+        <li><a href="exchange.html" class="nav-link">Exchange</a></li>
+        <li><a href="success-story.html" class="nav-link active">Success Story</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-outline-sm">Login</a>
+        <a href="register.html" class="btn-primary-sm">Join Community</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-content container">
+      <span class="section-tag">Achievements</span>
+      <h1>Fresh <span class="gradient-text">Success Story</span></h1>
+      <p>Celebrating the incredible achievements of our students who secured their futures globally in February and
+        March 2026.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Success
+          Story</span></div>
+    </div>
+  </section>
+
+  <!-- SUCCESS STORIES SECTION -->
+  <section class="success-stories-section">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">Student Milestones</span>
+        <h2 class="section-title">Our Latest <span class="gradient-text">Visa Approvals</span></h2>
+        <p class="section-desc">We are proud of our students who successfully secured admissions and visas for top
+          destinations.</p>
+      </div>
+
+      <!-- SUCCESS STORIES GALLERY (15 Slots) -->
+      <div class="success-grid">
+        <!-- Slot 1 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="success-img-wrapper">
+            <img src="assets/success-1.jpg" alt="Success Story 1" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-1.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 2 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="success-img-wrapper">
+            <img src="assets/success-2.jpg" alt="Success Story 2" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-2.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 3 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="success-img-wrapper">
+            <img src="assets/success-3.jpg" alt="Success Story 3" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-3.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 4 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="success-img-wrapper">
+            <img src="assets/success-4.jpg" alt="Success Story 4" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-4.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 5 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="success-img-wrapper">
+            <img src="assets/success-5.jpg" alt="Success Story 5" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-5.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 6 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="success-img-wrapper">
+            <img src="assets/success-6.jpg" alt="Success Story 6" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-6.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 7 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="success-img-wrapper">
+            <img src="assets/success-7.jpg" alt="Success Story 7" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-7.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 8 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="success-img-wrapper">
+            <img src="assets/success-8.jpg" alt="Success Story 8" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-8.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 9 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="success-img-wrapper">
+            <img src="assets/success-9.jpg" alt="Success Story 9" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-9.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 10 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="success-img-wrapper">
+            <img src="assets/success-10.jpg" alt="Success Story 10" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-10.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 11 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="success-img-wrapper">
+            <img src="assets/success-11.jpg" alt="Success Story 11" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-11.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 12 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="success-img-wrapper">
+            <img src="assets/success-12.jpg" alt="Success Story 12" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-12.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 13 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="success-img-wrapper">
+            <img src="assets/success-13.jpg" alt="Success Story 13" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-13.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 14 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="success-img-wrapper">
+            <img src="assets/success-14.jpg" alt="Success Story 14" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-14.jpg+to+assets'" />
+          </div>
+        </div>
+
+        <!-- Slot 15 -->
+        <div class="success-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="success-img-wrapper">
+            <img src="assets/success-15.jpg" alt="Success Story 15" class="success-img"
+              onerror="this.src='https://placehold.co/600x600/0a0f2e/ffffff?text=Add+success-15.jpg+to+assets'" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg">
+      <div class="cta-shape c1"></div>
+      <div class="cta-shape c2"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content">
+        <h2>Become Our Next <span>Success Story!</span></h2>
+        <p>Book a consultation today and take the first step towards your international education dream.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn-cta-primary"><i class="fas fa-calendar-alt"></i> Book Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo"><i class="fas fa-graduation-cap"></i>
+              <div><span>Gujjar Travel &</span><span>Education Consultant</span></div>
+            </div>
+            <p>Your trusted partner in achieving global education goals. A proud project of Gujjar Travel and Tour Group
+              of Companies.</p>
+            <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
+                  class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i
+                  class="fab fa-youtube"></i></a></div>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="payment.html">Fee Payment</a></li>
+              <li><a href="exchange.html">Exchange</a></li>
+              <li><a href="success-story.html">Success Story</a></li>
+              <li><a href="study-abroad.html">Study Abroad</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">Academic Planning</a></li>
+              <li><a href="services.html#transfers">Transfers</a></li>
+              <li><a href="services.html#visa">Visa Support</a></li>
+              <li><a href="services.html#test-prep">Test Prep</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>21-C Trust Plaza، Model Town Rd, Model Town, Gujranwala</span></div>
+            <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+92 3390414001</span></div>
+            <div class="footer-contact-item"><i
+                class="fas fa-envelope"></i><span>gujjar.travel.and.education.consultant@hotmail.com</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Gujjar Travel & Education Consultant. All rights reserved. A Project of <strong>Gujjar Travel and Tour
+            Group of Companies</strong>.</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+  <script src="js/main.js"></script>
+  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+  <a href="https://wa.me/923390414001" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+
+
+</html>

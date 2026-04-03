@@ -1,0 +1,974 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Gujjar Travel & Education Consultant</title>
+  <meta name="description"
+    content="Learn about Gujjar Travel & Education Consultant — a project of Gujjar Travel and Tour Group. Get to know CEO Chaudhry Moeen and our mission for accessible global education." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ABOUT PAGE SPECIFIC STYLES */
+    .about-intro {
+      background: var(--white);
+      padding: 100px 0;
+    }
+
+    .about-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-intro-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .about-intro-text p {
+      color: var(--text-secondary);
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+
+    .affiliation-box {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      color: var(--white);
+      margin-top: 28px;
+    }
+
+    .affiliation-box p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .affiliation-box .aff-title {
+      font-weight: 800;
+      color: var(--accent-light);
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-main-card {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+    }
+
+    @keyframes partnerFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      50% {
+        transform: translateY(-15px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .about-globe-icon {
+      font-size: 6rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-main-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--white);
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-main-card p {
+      color: rgba(255, 255, 255, 0.7);
+      position: relative;
+      z-index: 2;
+    }
+
+    .floating-badges {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .fb-badge {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-md);
+      padding: 10px 16px;
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .fb-badge.b1 {
+      top: 20px;
+      left: 20px;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .fb-badge.b2 {
+      top: 20px;
+      right: 20px;
+      animation: float 4s ease-in-out infinite 0.5s;
+    }
+
+    .fb-badge.b3 {
+      bottom: 20px;
+      left: 20px;
+      animation: float 6s ease-in-out infinite 1s;
+    }
+
+    .fb-badge.b4 {
+      bottom: 20px;
+      right: 20px;
+      animation: float 4.5s ease-in-out infinite 0.3s;
+    }
+
+    /* Mission/Vision */
+    .mission-section {
+      background: var(--off-white);
+      padding: 100px 0;
+    }
+
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .mv-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+    }
+
+    .mv-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .mv-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .mv-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .mv-card p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-size: 0.93rem;
+    }
+
+    /* CEO Full Section */
+    .ceo-full {
+      background: var(--white);
+      padding: 100px 0;
+    }
+
+    .ceo-full-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .ceo-full-left {
+      text-align: center;
+    }
+
+    .ceo-full-img-wrap {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto 24px;
+      position: relative;
+    }
+
+    .ceo-full-img-wrap .ceo-diamond-clip-border {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #f59e0b, #1e3a8a, #0d9488, #f59e0b);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .ceo-full-img-wrap .ceo-diamond-clip {
+      position: absolute;
+      inset: 6px;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+    }
+
+    .ceo-full-img-wrap img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .ceo-placeholder-lg {
+      font-size: 8rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .ceo-full-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .ceo-full-role {
+      color: var(--accent-dark);
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+
+    .ceo-full-right h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .ceo-full-right p {
+      color: var(--text-secondary);
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+
+    .ceo-values {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .ceo-value {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+      background: var(--off-white);
+      border-radius: var(--radius-md);
+    }
+
+    .ceo-value i {
+      color: var(--teal);
+      font-size: 1rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .ceo-value h5 {
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin-bottom: 2px;
+    }
+
+    .ceo-value p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* Timeline */
+    .timeline-section {
+      background: var(--off-white);
+      padding: 100px 0;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--gray-200);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 24px;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--blue-mid);
+      border: 3px solid var(--white);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+      z-index: 1;
+    }
+
+    .timeline-content {
+      flex: 1;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+    }
+
+    .timeline-year {
+      color: var(--blue-mid);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-content h4 {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .timeline-content p {
+      color: var(--text-secondary);
+      font-size: 0.87rem;
+      line-height: 1.6;
+    }
+
+    .timeline-spacer {
+      flex: 1;
+    }
+
+    /* Team */
+    .team-section {
+      background: var(--white);
+      padding: 100px 0;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 28px;
+    }
+
+    .team-card {
+      background: var(--off-white);
+      border-radius: var(--radius-xl);
+      padding: 36px 24px;
+      text-align: center;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      background: var(--white);
+    }
+
+    .team-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--grad-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--white);
+      margin: 0 auto 16px;
+    }
+
+    .team-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .team-card .role {
+      color: var(--accent-dark);
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .team-card p {
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1024px) {
+      .about-intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ceo-full-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ceo-full-left {
+        margin: 0 auto;
+      }
+
+      .mv-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ceo-values {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(even) {
+        flex-direction: column;
+        padding-left: 48px;
+      }
+
+      .timeline-dot {
+        left: 20px;
+      }
+
+      .timeline-spacer {
+        display: none;
+      }
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div id="preloader" class="preloader">
+    <div class="loader-logo">
+      <div class="loader-ring"></div>
+      <div class="loader-ring-inner"></div>
+      <div class="loader-text">GTE</div>
+    </div>
+    <p class="loader-tagline">Loading About Us...</p>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><img src="assets/logo.png" alt="Gujjar Logo" class="logo-img" /></div>
+        <div class="logo-text"><span class="logo-main">Gujjar</span><span class="logo-sub">Travel & Education</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="services.html#consultancy"><i class="fas fa-book-open"></i> Consultancy</a>
+            <a href="services.html#transfers"><i class="fas fa-exchange-alt"></i> Transfers</a>
+            <a href="services.html#visa"><i class="fas fa-passport"></i> Visa Support</a>
+            <a href="services.html#test-prep"><i class="fas fa-pen-ruler"></i> Test Prep</a>
+          </div>
+        </li>
+        <li><a href="payment.html" class="nav-link">Fee Payment</a></li>
+        <li><a href="exchange.html" class="nav-link">Exchange</a></li>
+        <li><a href="success-story.html" class="nav-link">Success Story</a></li>
+        <li><a href="study-abroad.html" class="nav-link">Study Abroad</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-outline-sm">Login</a>
+        <a href="register.html" class="btn-primary-sm">Join Community</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-content container">
+      <span class="section-tag">About Us</span>
+      <h1>Who We <span class="gradient-text">Are</span></h1>
+      <p>A project of Gujjar Travel and Tour Group of Companies — committed to making world-class global education
+        accessible for every student.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>About</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT INTRO -->
+  <section class="about-intro">
+    <div class="container">
+      <div class="about-intro-grid">
+        <div class="about-intro-text" data-aos="fade-right">
+          <span class="section-tag">Our Story</span>
+          <h2>Bridging <span class="gradient-text">Students & Global Universities</span></h2>
+          <p>Gujjar Travel and Education Consultant was founded with a single, powerful vision: to remove every barrier
+            that stands between a deserving student and a world-class education. We recognized that the process of
+            studying abroad was unnecessarily complicated, expensive, and opaque — and we decided to change that.</p>
+          <p>Operating as a dedicated subsidiary of the <strong>Gujjar Travel and Tour Group of Companies</strong>, we
+            combine decades of travel industry expertise with deep-rooted educational consultancy knowledge to offer a
+            holistic student experience unlike any other.</p>
+          <p>From your very first consultation to the day you set foot on your chosen campus — and beyond — Gujjar
+            Education is your partner, your guide, and your strongest advocate.</p>
+          <div class="affiliation-box">
+            <div class="aff-title"><i class="fas fa-building"></i> Official Affiliation</div>
+            <p>Gujjar Travel and Education Consultant is an official project and subsidiary of <strong>Gujjar Travel and
+                Tour Group of Companies</strong>. Our integrated ecosystem means students benefit from both educational
+              expertise and world-class travel services.</p>
+          </div>
+        </div>
+        <div class="about-visual" data-aos="fade-left">
+          <div class="about-main-card" style="animation: partnerFloat 6s ease-in-out infinite;">
+            <img src="assets/partnerships.jpg" alt="Business Partnerships Overview"
+              style="width: 100%; height: auto; display: block;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION / VISION / VALUES -->
+  <section class="mission-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Core Principles</span>
+        <h2 class="section-title">Our Mission, Vision & <span class="gradient-text">Values</span></h2>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card" data-aos="fade-up">
+          <div class="mv-icon">ðŸŽ¯</div>
+          <h3>Our Mission</h3>
+          <p>To make international education accessible to every deserving student by providing expert guidance,
+            transparent processes, and innovative financial solutions — including our industry-first 0% commission fee
+            payment portal.</p>
+        </div>
+        <div class="mv-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="mv-icon">ðŸ”­</div>
+          <h3>Our Vision</h3>
+          <p>To become the most trusted education consultancy in South Asia — where every student, regardless of their
+            background, can access the global education and career opportunities they deserve.</p>
+        </div>
+        <div class="mv-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="mv-icon">ðŸ’Ž</div>
+          <h3>Our Values</h3>
+          <p>Transparency, integrity, and student-first thinking are at the core of everything we do. We build long-term
+            relationships based on trust, honest guidance, and a genuine commitment to student success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CEO FULL SECTION -->
+  <section class="ceo-full">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Leadership</span>
+        <h2 class="section-title">Meet Our <span class="gradient-text">CEO</span></h2>
+      </div>
+      <div class="ceo-full-grid">
+        <div class="ceo-full-left" data-aos="fade-right">
+          <div class="ceo-full-img-wrap">
+            <div class="ceo-diamond-clip-border"></div>
+            <div class="ceo-diamond-clip">
+              <img src="assets/ceo.png.png" alt="Chaudhry Moeen – CEO"
+                onerror="this.style.display='none'; document.getElementById('ceoPlaceholderLg').style.display='flex'" />
+              <div id="ceoPlaceholderLg"
+                style="display:none; width:100%; height:100%; align-items:center; justify-content:center;">
+                <i class="fas fa-user-tie ceo-placeholder-lg"></i>
+              </div>
+            </div>
+          </div>
+          <div class="ceo-full-name">Chaudhry Moeen</div>
+          <div class="ceo-full-role">CEO & Founder Â· Gujjar Travel & Education</div>
+          <div style="margin-top:20px; display:flex; gap:12px; justify-content:center;">
+            <a href="#" class="social-dot" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-dot" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="contact.html" class="social-dot" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+          <div
+            style="margin-top:24px; background:var(--off-white); border-radius:var(--radius-lg); padding:20px; text-align:left;">
+            <div
+              style="font-size:0.8rem; color:var(--text-secondary); font-weight:600; margin-bottom:12px; text-transform:uppercase; letter-spacing:1px;">
+              Also Leads</div>
+            <div
+              style="display:flex; align-items:center; gap:10px; font-size:0.88rem; font-weight:600; color:var(--navy);">
+              <i class="fas fa-plane" style="color:var(--accent);"></i> Gujjar Travel and Tour Group of Companies
+            </div>
+          </div>
+        </div>
+        <div class="ceo-full-right" data-aos="fade-left">
+          <span class="section-tag">A Word from Our Leader</span>
+          <h2>A Visionary Committed to <span class="gradient-text">Student Success</span></h2>
+          <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+          <p>Under the leadership of CEO Chaudhry Moeen, Gujjar Travel and Education Consultant has built a reputation
+            for excellence, integrity, and genuine student-centric service. Chaudhry Moeen's vision was simple yet
+            revolutionary: to create a one-stop platform where students could get expert education guidance and pay
+            their university fees — all without any hidden costs.</p>
+          <p>"At Gujjar Travel and Tour, our mission is to provide exceptional travel experiences with trust, comfort,
+            and professionalism at every step. The same values are now embedded in our education division. We believe in
+            building long-term relationships through honesty, dedication, and outstanding service. Your journey is our
+            responsibility, and we strive to make every trip — whether it's to a university campus or a pilgrimage
+            destination — memorable and stress-free."</p>
+          <p>His leadership extends across both the travel and education sectors, creating a powerful synergy that
+            benefits students — from discounted flights to their study destinations to priority university admission
+            services.</p>
+          <div class="ceo-values">
+            <div class="ceo-value"><i class="fas fa-handshake"></i>
+              <div>
+                <h5>Trust & Integrity</h5>
+                <p>Honest guidance, transparent fees, no hidden costs.</p>
+              </div>
+            </div>
+            <div class="ceo-value"><i class="fas fa-heart"></i>
+              <div>
+                <h5>Student-First</h5>
+                <p>Every decision is made with the student's best interest.</p>
+              </div>
+            </div>
+            <div class="ceo-value"><i class="fas fa-globe"></i>
+              <div>
+                <h5>Global Vision</h5>
+                <p>Connecting Pakistani students with world-class opportunities.</p>
+              </div>
+            </div>
+            <div class="ceo-value"><i class="fas fa-rocket"></i>
+              <div>
+                <h5>Innovation</h5>
+                <p>First in Pakistan to offer 0% commission fee payments.</p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:28px;">
+            <a href="contact.html" class="btn-primary"><i class="fas fa-calendar-check"></i> Book Consultation with Our
+              Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- OUR JOURNEY TIMELINE -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Journey</span>
+        <h2 class="section-title">How We <span class="gradient-text">Grew</span></h2>
+      </div>
+
+      <style>
+        .growth-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
+          margin-top: 50px;
+        }
+        .growth-img-wrap {
+          position: relative;
+          border-radius: 30px;
+          overflow: hidden;
+          box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+        }
+        .growth-img-wrap img {
+          width: 100%;
+          height: 600px;
+          object-fit: cover;
+          display: block;
+        }
+        .growth-img-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to top, rgba(10,15,46,0.8), transparent 50%);
+        }
+        .growth-img-text {
+          position: absolute;
+          bottom: 40px;
+          left: 40px;
+          border-left: 4px solid var(--accent);
+          padding-left: 20px;
+        }
+        .growth-timeline-list {
+          padding-left: 20px;
+        }
+        .growth-timeline-list .timeline-item {
+          flex-direction: row !important;
+          padding-left: 60px !important;
+          gap: 0 !important;
+          margin-bottom: 50px;
+        }
+        .growth-timeline-list .timeline-dot {
+          left: 15px !important;
+        }
+        @media (max-width: 992px) {
+          .growth-grid { grid-template-columns: 1fr; }
+          .growth-img-wrap img { height: 400px; }
+        }
+      </style>
+
+      <div class="growth-grid">
+        <div class="growth-image" data-aos="fade-right">
+          <div class="growth-img-wrap">
+            <img src="assets/growth.jpg" alt="Gujjar Success Story">
+            <div class="growth-img-overlay"></div>
+            <div class="growth-img-text">
+              <h3 style="color: white; font-family: 'Playfair Display', serif; font-size: 2rem; margin: 0;">5,000+ Success Stories</h3>
+              <p style="color: rgba(255,255,255,0.8); font-size: 1rem; margin: 5px 0 0;">Growing with trust since day one.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="growth-timeline-list">
+          <div class="timeline" style="max-width: 100%; margin: 0; padding: 0;">
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content" style="flex: 1;">
+                <div class="timeline-year">YEAR 1</div>
+                <h4>Foundation of Gujjar Group</h4>
+                <p>Establishing the core values of trust and excellence in travel and tours.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content" style="flex: 1;">
+                <div class="timeline-year">YEAR 3</div>
+                <h4>Global Partnerships</h4>
+                <p>Expanding our network across UK, Canada, and Europe for international services.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content" style="flex: 1;">
+                <div class="timeline-year">YEAR 4</div>
+                <h4>Education Launch</h4>
+                <p>Launching our dedicated education consultancy division for student success.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content" style="flex: 1;">
+                <div class="timeline-year">YEAR 5</div>
+                <h4>0% Fee Portal Innovation</h4>
+                <p>First in Pakistan to offer zero-commission university fee payment portal.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="timeline-dot" style="background:var(--accent);"></div>
+              <div class="timeline-content" style="flex: 1;">
+                <div class="timeline-year" style="color:var(--accent);">TODAY</div>
+                <h4>Leading Consultancy</h4>
+                <p>The most trusted name in Pakistan for international education and travel.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE TEAM -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our People</span>
+        <h2 class="section-title">Meet the <span class="gradient-text">Expert Team</span></h2>
+        <p class="section-desc">Our dedicated professionals bring years of experience in education consultancy,
+          immigration law, and international admissions.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card" data-aos="zoom-in">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">CM</div>
+          <h4>Chaudhry Moeen</h4>
+          <div class="role">CEO & Founder</div>
+          <p>Visionary leader with expertise across travel and education sectors.</p>
+        </div>
+        <div class="team-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#3b82f6,#1e3a8a);">AA</div>
+          <h4>Ahmed Advisor</h4>
+          <div class="role">Senior Education Consultant</div>
+          <p>Specialist in UK and European university admissions with 8+ years experience.</p>
+        </div>
+        <div class="team-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#0d9488,#064e3b);">SR</div>
+          <h4>Sara Rehman</h4>
+          <div class="role">Visa & Immigration Expert</div>
+          <p>Certified immigration consultant specializing in student visa applications.</p>
+        </div>
+        <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#8b5cf6,#4c1d95);">KA</div>
+          <h4>Kamran Ali</h4>
+          <div class="role">Document & SOP Specialist</div>
+          <p>Expert in crafting winning SOPs and LORs with a 95% acceptance rate.</p>
+        </div>
+        <div class="team-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">NQ</div>
+          <h4>Nadia Qamar</h4>
+          <div class="role">IELTS & Test Prep Coach</div>
+          <p>Certified IELTS trainer who has helped 500+ students achieve their target scores.</p>
+        </div>
+        <div class="team-card" data-aos="zoom-in" data-aos-delay="500">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#f59e0b,#0d9488);">ZM</div>
+          <h4>Zain Malik</h4>
+          <div class="role">Transfer Specialist</div>
+          <p>Expert in institutional transfers and credit evaluation across global universities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg">
+      <div class="cta-shape c1"></div>
+      <div class="cta-shape c2"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Start Your <span>Global Education Journey?</span></h2>
+        <p>Join our community and let Chaudhry Moeen's expert team guide you to your dream university.</p>
+        <div class="cta-buttons">
+          <a href="register.html" class="btn-cta-primary"><i class="fas fa-user-plus"></i> Join the Community</a>
+          <a href="contact.html" class="btn-cta-secondary"><i class="fas fa-calendar-alt"></i> Book Free
+            Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo"><i class="fas fa-graduation-cap"></i>
+              <div><span>Gujjar Travel &</span><span>Education Consultant</span></div>
+            </div>
+            <p>Your trusted partner in achieving global education goals. A proud project of Gujjar Travel and Tour Group
+              of Companies.</p>
+            <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
+                  class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i
+                  class="fab fa-youtube"></i></a></div>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="payment.html">Fee Payment</a></li>
+              <li><a href="exchange.html">Exchange</a></li>
+              <li><a href="success-story.html">Success Story</a></li>
+              <li><a href="study-abroad.html">Study Abroad</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">Academic Planning</a></li>
+              <li><a href="services.html#transfers">Transfers</a></li>
+              <li><a href="services.html#visa">Visa Support</a></li>
+              <li><a href="services.html#test-prep">Test Prep</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>21-C Trust Plaza, Model Town Rd, Model Town, Gujranwala</span></div>
+            <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+92 3390414001</span></div>
+            <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>gujjar.travel.and.education.consultant@hotmail.com</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Gujjar Travel & Education Consultant. All rights reserved. A Project of <strong>Gujjar Travel and Tour
+            Group of Companies</strong>.</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+  <script src="js/main.js"></script>
+
+
+  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+  <a href="https://wa.me/923390414001" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+
+
+</html>
+
+
+

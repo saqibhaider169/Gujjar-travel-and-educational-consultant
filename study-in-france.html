@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study in France | Gujjar Travel & Education Consultant</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .country-hero {
+      position: relative;
+      padding: 180px 0 100px;
+      background: linear-gradient(to right, rgba(10, 15, 46, 0.9), rgba(10, 15, 46, 0.7)), url('assets/countries/france.jpg') center/cover;
+      color: #fff;
+    }
+    .country-content {
+      padding: 80px 0;
+      background: #f8fafc;
+    }
+    .content-box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .content-box h2 {
+      color: var(--navy);
+      font-family: 'Playfair Display', serif;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+    .content-box h3 { margin-top: 20px; color: var(--navy); }
+    .content-box p, .content-box ul {
+      margin-bottom: 20px;
+      color: #4b5563;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .content-box ul { padding-left: 20px; }
+    .content-box li { margin-bottom: 10px; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: -40px;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 10;
+    }
+    .stat-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+    .stat-card i { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
+    .stat-card h4 { font-size: 1.1rem; color: var(--navy); font-weight: 700; margin: 0; }
+    
+    .toc-container {
+      background: #f8fafc;
+      padding: 30px;
+      border-radius: 20px;
+      margin: 40px 0;
+      border: 1px solid #e2e8f0;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .doc-list { list-style: none !important; padding-left: 0 !important; }
+    .doc-list li { 
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 10px 15px;
+      background: #f1f5f9;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+    .doc-list li:hover { transform: translateX(5px); }
+    .doc-list i { color: var(--accent); margin-right: 15px; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><img src="assets/logo.png" alt="Gujjar Logo" class="logo-img" /></div>
+        <div class="logo-text"><span class="logo-main">Gujjar</span><span class="logo-sub">Travel & Education</span></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="services.html#consultancy"><i class="fas fa-book-open"></i> Consultancy</a>
+            <a href="services.html#transfers"><i class="fas fa-exchange-alt"></i> Transfers</a>
+            <a href="services.html#visa"><i class="fas fa-passport"></i> Visa Support</a>
+            <a href="services.html#test-prep"><i class="fas fa-pen-ruler"></i> Test Prep</a>
+          </div>
+        </li>
+        <li><a href="payment.html" class="nav-link">Fee Payment</a></li>
+        <li><a href="exchange.html" class="nav-link">Exchange</a></li>
+        <li><a href="success-story.html" class="nav-link">Success Story</a></li>
+        <li><a href="study-abroad.html" class="nav-link">Study Abroad</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-outline-sm">Login</a>
+        <a href="register.html" class="btn-primary-sm">Join Community</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="country-hero">
+    <div class="container text-center">
+      <div class="breadcrumb" style="justify-content:center; margin-bottom:20px;">
+        <a href="index.html">Home</a><i class="fas fa-chevron-right"></i>
+        <a href="services.html">Services</a><i class="fas fa-chevron-right"></i>
+        <span>Study in France</span>
+      </div>
+      <h1 style="font-family:'Playfair Display',serif; font-size:4rem; margin-bottom:20px;">Study in <span style="color:var(--accent);">France</span></h1>
+      <p style="font-size:1.2rem; max-width:600px; margin:0 auto; opacity:0.9;">Study In France 2026 - Free Consultancy</p>
+    </div>
+  </section>
+
+  <section class="country-content">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card"><i class="fas fa-university"></i><h4>79 Universities</h4></div>
+        <div class="stat-card"><i class="fas fa-euro-sign"></i><h4>€15,000+ Annual Tuition Fee</h4></div>
+        <div class="stat-card"><i class="fas fa-briefcase"></i><h4>1 to 3 Years Post Study Work Visa</h4></div>
+      </div>
+      
+      <div class="content-box">
+        <p>One of the most sought-after locations for overseas students is France. France’s key advantages are:</p>
+        <ul style="margin-bottom: 25px;">
+          <li>World-class educational system.</li>
+          <li>Incredibly low tuition.</li>
+          <li>Pleasant Way of life.</li>
+        </ul>
+        <p>You may easily find a world-class education in the nation, regardless of your goals for your education – undergraduate, graduate, or otherwise. Moreover, several French colleges and other educational facilities deliver top-notch education to individuals everywhere, regardless of where you visit. You may be confident that, as a student at one of these educational institutes, you will experience the many other beneficial aspects of the nation in addition to receiving top-quality education.</p>
+
+        <div class="toc-container">
+          <h3 style="margin-top:0; border-bottom: 2px solid var(--accent); padding-bottom: 10px; display: inline-block;"><i class="fas fa-list-ul" style="margin-right:10px; color:var(--accent);"></i> Table Of Contents</h3>
+          <ul style="margin-bottom:0; list-style:none; padding-left:0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top:20px;">
+            <li><a href="#why-study" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Why Study In France?</a></li>
+            <li><a href="#admission" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Admission Requirements</a></li>
+            <li><a href="#cost" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Cost Of Studying</a></li>
+            <li><a href="#scholarships" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Scholarships</a></li>
+            <li><a href="#visa" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Visa Requirements</a></li>
+            <li><a href="#post-study" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Work Opportunities</a></li>
+          </ul>
+        </div>
+
+        <h2 id="why-study">Why Study In France?</h2>
+        <p>France has one of the largest higher education systems in Europe, if not the world. Numerous French colleges consistently hold prominent positions in global university rankings. École Normale Supérieure, École Polytechnique, Pierre and Marie Curie University, and the University of Paris-Sud are a few.</p>
+        <p>With its vibrant student population, rich culture, delicious cuisine, and stunning architecture, France is the perfect destination for your degree study abroad! Besides, you may acquire a new cultural perspective and learn the language by studying in France.</p>
+        <p>International students regard France as a desirable destination for study abroad degrees. French universities offer various class schedules and courses, and students can enroll full-time or part-time. The hours students can attend these courses will also vary depending on the college.</p>
+
+        <h2 id="admission">Admission Requirements In France</h2>
+        <p>Admission requirements for studying in France can vary depending on the specific institution, program level (undergraduate vs. graduate), and your nationality (EU/EEA vs. non-EU/EEA). Here’s a general overview of the common steps and documents involved for non-EU/EEA students:</p>
+        <ul style="margin-bottom: 25px;">
+          <li><strong>Choose Your Program:</strong> Research universities and programs that align with your academic interests.</li>
+          <li><strong>Check Eligibility:</strong> Ensure you meet the basic entry requirements for your chosen program. This might include minimum academic qualifications (e.g., high school diploma or equivalent) and relevant subject prerequisites.</li>
+          <li><strong>Apply for the DAP (Demande admission Préalable):</strong> This is a compulsory pre-admission application required for most non-EU/EEA students applying for Bachelor’s or Master’s programs in France. Applications are submitted through the platform “Mes Services” on the website of Campus France.</li>
+        </ul>
+        <h3>Application Documents:</h3>
+        <ul class="doc-list">
+          <li><i class="fas fa-file-alt"></i> Completed Online Application Form</li>
+          <li><i class="fas fa-file-invoice"></i> Official transcripts</li>
+          <li><i class="fas fa-chart-line"></i> Standardized Test Scores (if required)</li>
+          <li><i class="fas fa-language"></i> Proof of English or French Language Proficiency</li>
+          <li><i class="fas fa-id-card"></i> Passport Copy</li>
+          <li><i class="fas fa-pen-nib"></i> Motivation Letter</li>
+          <li><i class="fas fa-envelope-open-text"></i> Letter of Recommendation</li>
+          <li><i class="fas fa-folder-open"></i> Portfolio</li>
+          <li><i class="fas fa-piggy-bank"></i> Financial Guarantee</li>
+        </ul>
+
+        <h2 id="cost">Cost Of Studying In France</h2>
+        <p>In addition to receiving a top-notch education, public colleges in France also provide very affordable tuition. Moreover, except for a matriculation fee of about 200 euros annually, citizens and permanent residents of EEA countries and Switzerland are eligible to study at public institutions without paying tuition.</p>
+        <p>However, students from countries other than Europe must pay between 3,000 and 4,000 euros annually. Besides, private colleges typically charge up to 20,000 euros each year. Public universities charge students from outside the EU (Bachelor’s, Master’s, or PhD) between 170 and 650 EUR a year, depending on the subject. Living as a student in France doesn’t have to be costly.</p>
+        <p>Additionally, in places like Toulouse, Lyon, or Bordeaux, the student budget is estimated to be 850–1,000 euros a month, including housing. Even so, it is modest by European standards. You may save even more money in smaller communities, as costs vary area-wise. However, Paris, the capital, is an exception; at the very least costs 1,250 to 1,400 euros each month.</p>
+
+        <h2 id="scholarships">Scholarships For International Students In France</h2>
+        <p>Studying in France offers many perks that are likely to be recognized, especially combined with the exceptional institutions and learning opportunities in France. If a student wants to pursue higher education at a French institution, many financial aid options are available to make college more accessible.</p>
+        <p>In addition, students who meet the eligibility requirements can apply for grants and loans. A college education in France is a prudent financial decision because the French government also pays for a portion of the fees associated with attending a university in the nation. Besides, France has far cheaper tuition than other places.</p>
+        <p>Moreover, international students can fund their studies in France and around Europe with the support of several scholarships provided by French public institutes and the Erasmus+ program.</p>
+
+        <div style="background:var(--navy); color:#fff; padding:40px; border-radius:15px; text-align:center; margin:40px 0; background: linear-gradient(135deg, var(--navy) 0%, #1e293b 100%);">
+          <h3 style="color:#fff; margin:0 0 10px; font-family:'Playfair Display',serif; font-size:1.8rem;">Get a call-back within 24 hours</h3>
+          <p style="color:rgba(255,255,255,0.8); margin-bottom:20px; font-size:1.1rem;">Need clarity on the application process? Our experts are here to help.</p>
+          <a href="contact.html" class="btn-primary-sm" style="background:var(--accent); color:var(--navy); font-weight:700; padding:12px 30px;">Request Call Back <i class="fas fa-phone-alt" style="margin-left:8px;"></i></a>
+        </div>
+
+        <h2 id="visa">Student Visa Requirements In France</h2>
+        <ul class="doc-list">
+          <li><i class="fas fa-check-square"></i> Valid passport</li>
+          <li><i class="fas fa-check-square"></i> Passport photograph</li>
+          <li><i class="fas fa-check-square"></i> Visa application form</li>
+          <li><i class="fas fa-check-square"></i> University acceptance letter</li>
+          <li><i class="fas fa-check-square"></i> An EEF number</li>
+          <li><i class="fas fa-check-square"></i> An EEF admission certificate</li>
+          <li><i class="fas fa-check-square"></i> Proof of residency in France</li>
+          <li><i class="fas fa-check-square"></i> Proof of medical insurance</li>
+          <li><i class="fas fa-check-square"></i> Proof of paid visa application fee</li>
+          <li><i class="fas fa-check-square"></i> Proof of sufficient funds for stay in France</li>
+          <li><i class="fas fa-check-square"></i> Proof of temporary accommodation in France</li>
+        </ul>
+
+        <h2 id="post-study">Post-Study Work Opportunities</h2>
+        <p>For international graduates, there are several avenues for employment in France. Besides, your country may exempt you from requiring a temporary residency permit. After graduating, a student can only remain in France if he has paid employment. Moreover, students who are employed can apply for a residency permit. Graduate and undergraduate students alike should take note of this.</p>
+        <p>If a non-European graduate student is unemployed, they might apply for a temporary residency permit called an Autorisation Provisoire de Séjour. While studying in France, international students are also permitted to work at the university where they are staying. To make it easier for students to handle studies, jobs are arranged around study and class periods. Yet, this is an effective method of gaining job experience.</p>
+      </div>
+
+      <div style="text-align:center; margin-top:60px; background:white; padding:60px 40px; border-radius:20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #f1f5f9;">
+        <h2 style="color:var(--navy); font-family:'Playfair Display',serif; font-size:2.8rem; margin-bottom:20px;">Book A Meeting With An Expert</h2>
+        <p style="color:#4b5563; font-size:1.15rem; max-width:900px; margin:0 auto 30px; line-height:1.8;">Do you intend to pursue further studies in France? We are available to assist you at every turn! By filling out our brief form, you may set up a one-on-one meeting to discuss your study abroad options, prices, scholarships, and other information. We provide professional guidance and assistance at every stage of the procedure, even if it may seem daunting.</p>
+        <p style="color:var(--navy); font-size:1.2rem; font-weight:700; margin-bottom:40px;">Make an appointment with us right now, and we’ll assist you in realizing your goals of studying abroad!</p>
+        <a href="contact.html" class="btn-primary" style="font-size:1.2rem; padding:18px 50px; border-radius:50px;">Book An Appointment <i class="fas fa-calendar-check" style="margin-left:12px;"></i></a>
+      </div>
+    </div>
+  </section>
+
+    <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo"><i class="fas fa-graduation-cap"></i>
+              <div><span>Gujjar Travel &</span><span>Education Consultant</span></div>
+            </div>
+            <p>Your trusted partner in achieving global education goals. A proud project of Gujjar Travel and Tour Group of Companies.</p>
+            <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>21-C Trust Plaza, Model Town Rd, Model Town, Gujranwala</span></div>
+            <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+92 3390414001</span></div>
+            <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>gujjar.travel.and.education.consultant@hotmail.com</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Gujjar Travel & Education Consultant. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <a href="https://wa.me/923390414001" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</body>
+</html>

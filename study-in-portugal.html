@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study in Portugal | Gujjar Travel & Education Consultant</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .country-hero {
+      position: relative;
+      padding: 180px 0 100px;
+      background: linear-gradient(to right, rgba(10, 15, 46, 0.9), rgba(10, 15, 46, 0.7)), url('assets/countries/portugal.jpg') center/cover;
+      color: #fff;
+    }
+    .country-content {
+      padding: 80px 0;
+      background: #f8fafc;
+    }
+    .content-box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .content-box h2 {
+      color: var(--navy);
+      font-family: 'Playfair Display', serif;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 2.2rem;
+    }
+    .content-box h3 { margin-top: 25px; color: var(--navy); font-weight: 700; font-size: 1.3rem; }
+    .content-box p, .content-box ul {
+      margin-bottom: 20px;
+      color: #4b5563;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .content-box ul { padding-left: 20px; }
+    .content-box li { margin-bottom: 12px; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: -40px;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 10;
+    }
+    .stat-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+    .stat-card i { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
+    .stat-card h4 { font-size: 1.1rem; color: var(--navy); font-weight: 700; margin: 0; }
+
+    .toc-container {
+      background: #f8fafc;
+      padding: 30px;
+      border-radius: 20px;
+      margin: 40px 0;
+      border: 1px solid #e2e8f0;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .doc-list { list-style: none !important; padding-left: 0 !important; }
+    .doc-list li { 
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 10px 15px;
+      background: #f1f5f9;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+    .doc-list li:hover { transform: translateX(5px); }
+    .doc-list i { color: var(--accent); margin-right: 15px; font-size: 1.2rem; }
+
+    .living-cost-box {
+      background: #f8fafc;
+      padding: 25px;
+      border-radius: 15px;
+      border-left: 4px solid var(--accent);
+      margin: 20px 0;
+    }
+    .living-cost-box ul { margin-bottom: 0 !important; }
+  </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><img src="assets/logo.png" alt="Gujjar Logo" class="logo-img" /></div>
+        <div class="logo-text"><span class="logo-main">Gujjar</span><span class="logo-sub">Travel & Education</span></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="services.html#consultancy"><i class="fas fa-book-open"></i> Consultancy</a>
+            <a href="services.html#transfers"><i class="fas fa-exchange-alt"></i> Transfers</a>
+            <a href="services.html#visa"><i class="fas fa-passport"></i> Visa Support</a>
+            <a href="services.html#test-prep"><i class="fas fa-pen-ruler"></i> Test Prep</a>
+          </div>
+        </li>
+        <li><a href="payment.html" class="nav-link">Fee Payment</a></li>
+        <li><a href="exchange.html" class="nav-link">Exchange</a></li>
+        <li><a href="success-story.html" class="nav-link">Success Story</a></li>
+        <li><a href="study-abroad.html" class="nav-link">Study Abroad</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-outline-sm">Login</a>
+        <a href="register.html" class="btn-primary-sm">Join Community</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="country-hero">
+    <div class="container text-center">
+      <div class="breadcrumb" style="justify-content:center; margin-bottom:20px;">
+        <a href="index.html">Home</a><i class="fas fa-chevron-right"></i>
+        <a href="services.html">Services</a><i class="fas fa-chevron-right"></i>
+        <span>Study in Portugal</span>
+      </div>
+      <h1 style="font-family:'Playfair Display',serif; font-size:4rem; margin-bottom:20px; line-height:1.2;">Study in <span style="color:var(--accent);">Portugal</span></h1>
+      <p style="font-size:1.3rem; max-width:800px; margin:0 auto; opacity:0.9;">Study In Portugal 2026 - Free Consultancy</p>
+    </div>
+  </section>
+
+  <section class="country-content">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card"><i class="fas fa-university"></i><h4>50+ Universities</h4></div>
+        <div class="stat-card"><i class="fas fa-euro-sign"></i><h4>€3,000 – €7,000 Annual Tuition</h4></div>
+        <div class="stat-card"><i class="fas fa-briefcase"></i><h4>1 to 2 Years Post Study Stay</h4></div>
+      </div>
+      
+      <div class="content-box">
+        <p>Portugal invested in improving its higher education system, introduced more English-taught programs, and clarified its international admissions policies. Instead of positioning itself as a luxury destination, Portugal focused on offering practical education with manageable costs, which naturally appealed to students looking for a balanced option in Europe.</p>
+        <p>What students notice after arriving is the pace of life. Things move a little slower, but in a good way. University systems are structured, cities are easy to navigate, and daily life feels less stressful compared to larger European hubs.</p>
+
+        <div class="toc-container">
+          <h3 style="margin-top:0; border-bottom: 2px solid var(--accent); padding-bottom: 10px; display: inline-block;"><i class="fas fa-list-ul" style="margin-right:10px; color:var(--accent);"></i> Table Of Contents</h3>
+          <ul style="margin-bottom:0; list-style:none; padding-left:0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top:20px;">
+            <li><a href="#why-study" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Why Study in Portugal?</a></li>
+            <li><a href="#cost" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Cost of Studying</a></li>
+            <li><a href="#intakes" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Study Intakes</a></li>
+            <li><a href="#scholarships" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Scholarships</a></li>
+            <li><a href="#visa" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Visa Requirements</a></li>
+            <li><a href="#universities" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Top Universities</a></li>
+          </ul>
+        </div>
+
+        <h2 id="why-study">Why Study in Portugal?</h2>
+        <h3>European Education With Global Recognition</h3>
+        <p>Portugal is part of the European Union and follows the Bologna system, meaning degrees are recognised across Europe and internationally. Universities such as the University of Lisbon, University of Porto, and NOVA University of Lisbon are well known, particularly in business, engineering, social sciences, and technology-related fields.</p>
+        
+        <h3>Affordable Compared to Western Europe</h3>
+        <p>Portugal is considered one of the more affordable study destinations in Western Europe. Tuition fees and living costs are lower than in countries such as the UK, Ireland, or the Netherlands, making it a realistic option for people who want a high-quality education without excessive financial pressure.</p>
+        
+        <h3>Growing Number of English-Taught Programs</h3>
+        <p>Portuguese is the national language, but many universities now offer English-taught bachelor’s and master’s programs, especially in business, management, engineering, tourism, and data-related fields. This helps students begin their education immediately while gradually learning Portuguese for social integration.</p>
+        
+        <h3>Safe, Relaxed Student Lifestyle</h3>
+        <p>Cities such as Lisbon, Porto, Coimbra, and Braga are popular among international students. Portugal is ranked among the safest countries in Europe. Public transport is affordable, the climate is mild, and student life feels relaxed yet engaging.</p>
+
+        <h2 id="cost">Cost of Studying in Portugal</h2>
+        <h3>Tuition Fees</h3>
+        <p>Tuition fees in Portugal are reasonable by European standards and vary by institution and program.</p>
+        <ul style="list-style: none; padding-left: 0;">
+          <li><i class="fas fa-graduation-cap" style="color:var(--accent); margin-right:10px;"></i> <strong>Bachelor’s Programs:</strong> €3,000 – €7,000 per year</li>
+          <li><i class="fas fa-certificate" style="color:var(--accent); margin-right:10px;"></i> <strong>Master’s Programs:</strong> €3,500 – €8,000 per year</li>
+          <li><i class="fas fa-building-columns" style="color:var(--accent); margin-right:10px;"></i> <strong>Private Universities:</strong> €6,000 – €12,000 per year</li>
+        </ul>
+        <p>Public universities are more affordable and widely preferred.</p>
+
+        <h3>Living Costs</h3>
+        <p>Living expenses in Portugal are lower than in many Western European countries.</p>
+        <div class="living-cost-box">
+          <ul style="list-style: none; padding-left: 0;">
+            <li><i class="fas fa-home"></i> <strong>Accommodation:</strong> €350 – €600</li>
+            <li><i class="fas fa-utensils"></i> <strong>Food & Groceries:</strong> €180 – €250</li>
+            <li><i class="fas fa-bus"></i> <strong>Transportation:</strong> €40 – €60</li>
+            <li><i class="fas fa-bolt"></i> <strong>Utilities & Internet:</strong> €80 – €120</li>
+            <li><i class="fas fa-wallet"></i> <strong>Personal Expenses:</strong> €80 – €150</li>
+          </ul>
+        </div>
+        <p>Approximate Monthly Total: <strong>€750 – €1,100</strong></p>
+
+        <h2 id="intakes">Intakes in Portugal</h2>
+        <p>Portuguese universities usually offer two main intakes:</p>
+        <ul>
+          <li><strong>Fall Intake (September / October):</strong> Main intake for almost all programs.</li>
+          <li><strong>Spring Intake (February):</strong> Available for selected programs.</li>
+        </ul>
+        <p>Application deadlines vary by university, so early planning is strongly recommended.</p>
+
+        <h2 id="scholarships">Scholarships for International Students in Portugal</h2>
+        <p>Scholarship options are there, but are limited and competitive. Common opportunities include:</p>
+        <ul>
+          <li>Portuguese Government Scholarships</li>
+          <li>University-based merit scholarships</li>
+          <li>Erasmus+ mobility grants</li>
+        </ul>
+        <p>Most scholarships provide partial support rather than full funding.</p>
+
+        <div style="background:var(--navy); color:#fff; padding:40px; border-radius:15px; text-align:center; margin:40px 0; background: linear-gradient(135deg, var(--navy) 0%, #1e293b 100%);">
+          <h3 style="color:#fff; margin:0 0 10px; font-family:'Playfair Display',serif; font-size:1.8rem;">Get a call-back within 24 hours</h3>
+          <p style="color:rgba(255,255,255,0.8); margin-bottom:20px; font-size:1.1rem;">Interested in Portugal? Let's discuss your study plan.</p>
+          <a href="contact.html" class="btn-primary-sm" style="background:var(--accent); color:var(--navy); font-weight:700; padding:12px 30px;">Request Call Back <i class="fas fa-phone-alt" style="margin-left:8px;"></i></a>
+        </div>
+
+        <h2 id="visa">Portugal Student Visa Requirements</h2>
+        <p>The Portugal student visa process is clear but requires organised documentation. Typical Requirements:</p>
+        <ul class="doc-list">
+          <li><i class="fas fa-passport"></i> Valid passport</li>
+          <li><i class="fas fa-university"></i> Official university admission letter</li>
+          <li><i class="fas fa-home"></i> Proof of accommodation</li>
+          <li><i class="fas fa-wallet"></i> Evidence of sufficient financial means</li>
+          <li><i class="fas fa-file-invoice"></i> Academic records and certificates</li>
+          <li><i class="fas fa-hospital-user"></i> Health insurance</li>
+          <li><i class="fas fa-file-signature"></i> Completed visa application and fee</li>
+        </ul>
+        <p>Visa processing typically takes 4-8 weeks.</p>
+
+        <h2 id="post-study">Post-Study Work Opportunities</h2>
+        <p>After completing their studies, graduates can apply for a temporary residence permit to search for employment. Portugal’s job market offers opportunities in technology, tourism, hospitality, renewable energy, and multinational companies. Although the local job market is competitive, learning Portuguese improves employability and long-term prospects.</p>
+
+        <h2 id="universities">Top Universities to Study in Portugal</h2>
+        <ul class="doc-list">
+          <li><i class="fas fa-university"></i> University of Lisbon</li>
+          <li><i class="fas fa-graduation-cap"></i> University of Porto</li>
+          <li><i class="fas fa-landmark"></i> NOVA University Lisbon</li>
+          <li><i class="fas fa-book"></i> University of Coimbra</li>
+          <li><i class="fas fa-microchip"></i> University of Minho</li>
+          <li><i class="fas fa-building-columns"></i> ISCTE – University Institute of Lisbon</li>
+          <li><i class="fas fa-chart-line"></i> Católica Lisbon School of Business & Economics</li>
+        </ul>
+      </div>
+
+      <div style="text-align:center; margin-top:60px; background:white; padding:60px 40px; border-radius:20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #f1f5f9;">
+        <h2 style="color:var(--navy); font-family:'Playfair Display',serif; font-size:2.8rem; margin-bottom:20px;">Book a Meeting with an Expert</h2>
+        <p style="color:#4b5563; font-size:1.15rem; max-width:900px; margin:0 auto 30px; line-height:1.8;">Portugal is ideal for those who are looking for European education, affordable living, and a balanced lifestyle. We help you explore Portugal with clarity and realistic expectations.</p>
+        <p style="color:var(--navy); font-size:1.2rem; font-weight:700; margin-bottom:40px;">Contact us today or book a free online consultation!</p>
+        <a href="contact.html" class="btn-primary" style="font-size:1.2rem; padding:18px 50px; border-radius:50px;">Book An Appointment <i class="fas fa-calendar-check" style="margin-left:12px;"></i></a>
+      </div>
+    </div>
+  </section>
+
+    <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo"><i class="fas fa-graduation-cap"></i>
+              <div><span>Gujjar Travel &</span><span>Education Consultant</span></div>
+            </div>
+            <p>Your trusted partner in achieving global education goals. A proud project of Gujjar Travel and Tour Group of Companies.</p>
+            <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>21-C Trust Plaza Model Town Rd, Model Town, Gujranwala</span></div>
+            <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+92 3390414001</span></div>
+            <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>gujjar.travel.and.education.consultant@hotmail.com</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>2026 Gujjar Travel & Education Consultant. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <a href="https://wa.me/923390414001" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</body>
+</html>

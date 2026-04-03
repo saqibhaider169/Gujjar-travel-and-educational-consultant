@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study in New Zealand | Gujjar Travel & Education Consultant</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .country-hero {
+      position: relative;
+      padding: 180px 0 100px;
+      background: linear-gradient(to right, rgba(10, 15, 46, 0.9), rgba(10, 15, 46, 0.7)), url('assets/countries/newzealand.jpg') center/cover;
+      color: #fff;
+    }
+    .country-content {
+      padding: 80px 0;
+      background: #f8fafc;
+    }
+    .content-box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .content-box h2 {
+      color: var(--navy);
+      font-family: 'Playfair Display', serif;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 2.2rem;
+    }
+    .content-box h3 { margin-top: 25px; color: var(--navy); font-weight: 700; font-size: 1.3rem; }
+    .content-box p, .content-box ul {
+      margin-bottom: 20px;
+      color: #4b5563;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .content-box ul { padding-left: 20px; }
+    .content-box li { margin-bottom: 12px; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: -40px;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 10;
+    }
+    .stat-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+    .stat-card i { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
+    .stat-card h4 { font-size: 1.1rem; color: var(--navy); font-weight: 700; margin: 0; }
+
+    .toc-container {
+      background: #f8fafc;
+      padding: 30px;
+      border-radius: 20px;
+      margin: 40px 0;
+      border: 1px solid #e2e8f0;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .doc-list { list-style: none !important; padding-left: 0 !important; }
+    .doc-list li { 
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 10px 15px;
+      background: #f1f5f9;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+    .doc-list li:hover { transform: translateX(5px); }
+    .doc-list i { color: var(--accent); margin-right: 15px; font-size: 1.2rem; }
+
+    .intake-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .intake-table th { background: var(--navy); color: #fff; padding: 15px; text-align: left; }
+    .intake-table td { padding: 12px 15px; border-bottom: 1px solid #f1f5f9; color: #4b5563; }
+  </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><img src="assets/logo.png" alt="Gujjar Logo" class="logo-img" /></div>
+        <div class="logo-text"><span class="logo-main">Gujjar</span><span class="logo-sub">Travel & Education</span></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="services.html#consultancy"><i class="fas fa-book-open"></i> Consultancy</a>
+            <a href="services.html#transfers"><i class="fas fa-exchange-alt"></i> Transfers</a>
+            <a href="services.html#visa"><i class="fas fa-passport"></i> Visa Support</a>
+            <a href="services.html#test-prep"><i class="fas fa-pen-ruler"></i> Test Prep</a>
+          </div>
+        </li>
+        <li><a href="payment.html" class="nav-link">Fee Payment</a></li>
+        <li><a href="exchange.html" class="nav-link">Exchange</a></li>
+        <li><a href="success-story.html" class="nav-link">Success Story</a></li>
+        <li><a href="study-abroad.html" class="nav-link">Study Abroad</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-outline-sm">Login</a>
+        <a href="register.html" class="btn-primary-sm">Join Community</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="country-hero">
+    <div class="container text-center">
+      <div class="breadcrumb" style="justify-content:center; margin-bottom:20px;">
+        <a href="index.html">Home</a><i class="fas fa-chevron-right"></i>
+        <a href="services.html">Services</a><i class="fas fa-chevron-right"></i>
+        <span>Study in New Zealand</span>
+      </div>
+      <h1 style="font-family:'Playfair Display',serif; font-size:4rem; margin-bottom:20px; line-height:1.2;">Study in <span style="color:var(--accent);">New Zealand</span></h1>
+      <p style="font-size:1.3rem; max-width:800px; margin:0 auto; opacity:0.9;">Study In New Zealand 2026 - Free Consultancy</p>
+    </div>
+  </section>
+
+  <section class="country-content">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card"><i class="fas fa-university"></i><h4>32 Universities</h4></div>
+        <div class="stat-card"><i class="fas fa-money-bill-wave"></i><h4>NZ$25,000 to NZ$50,000 Annual Tuition</h4></div>
+        <div class="stat-card"><i class="fas fa-briefcase"></i><h4>2 Years Post Study Work Visa</h4></div>
+      </div>
+      
+      <div class="content-box">
+        <p>You can be sure that whichever institution you select when you decide to study in New Zealand will uphold the highest educational standards. Institutions in New Zealand provide top-notch education quality, a diverse cultural experience, economic stability, and an amiable atmosphere. Additionally, you will encounter students from around the globe while studying in New Zealand. Because of its remote location, it is considered an exciting travel destination by people. Moreover, you may combine exceptional experiences with a top-notch education in New Zealand. Explore your choices with us now!</p>
+
+        <div class="toc-container">
+          <h3 style="margin-top:0; border-bottom: 2px solid var(--accent); padding-bottom: 10px; display: inline-block;"><i class="fas fa-list-ul" style="margin-right:10px; color:var(--accent);"></i> Table Of Contents</h3>
+          <ul style="margin-bottom:0; list-style:none; padding-left:0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top:20px;">
+            <li><a href="#why-study" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Why Study In New Zealand?</a></li>
+            <li><a href="#admission" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Admission Requirements</a></li>
+            <li><a href="#cost" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Cost Of Studying</a></li>
+            <li><a href="#intakes" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Study Intakes</a></li>
+            <li><a href="#scholarships" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Scholarships</a></li>
+            <li><a href="#visa" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Visa Requirements</a></li>
+            <li><a href="#courses" style="color:var(--navy); text-decoration:none; font-weight:600;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:10px; color:var(--accent);"></i> Best Courses</a></li>
+          </ul>
+        </div>
+
+        <h2 id="why-study">Why Study In New Zealand?</h2>
+        <p>New Zealand ranks third globally in education, offering world-class credentials, abundant research opportunities, and an exceptional quality of life. Although, studying here means enjoying stunning beaches, diverse landscapes, and a vibrant outdoor lifestyle. Furthermore, embrace a unique, multicultural society that welcomes all talents, backgrounds, and beliefs.</p>
+        <p>Moreover, students in New Zealand are encouraged to think critically, collaborate, and innovate. With top-notch education, state-of-the-art labs, and highly qualified instructors, you have everything you need to achieve your goals. New Zealand is an exciting place to learn and grow, blending academic excellence with breathtaking natural beauty.</p>
+
+        <h2 id="admission">Admission Requirements In New Zealand</h2>
+        <ul class="doc-list">
+          <li><i class="fas fa-passport"></i> A valid passport</li>
+          <li><i class="fas fa-user-tie"></i> Personal Interview</li>
+          <li><i class="fas fa-file-alt"></i> Updated Resume or CV</li>
+          <li><i class="fas fa-id-card"></i> New Zealand Student Visa</li>
+          <li><i class="fas fa-language"></i> Proof of English Proficiency (IELTS/TOEFL)</li>
+          <li><i class="fas fa-pen-fancy"></i> 500-word Statement of Purpose</li>
+          <li><i class="fas fa-file-contract"></i> Standardized test scores (GRE/GMAT/ACT)</li>
+          <li><i class="fas fa-graduation-cap"></i> Official transcripts or certified copies</li>
+          <li><i class="fas fa-chart-line"></i> At least 3.0 GPA or grade C in previous degree</li>
+          <li><i class="fas fa-envelope-open-text"></i> 2 academic and 1 professional LOR</li>
+        </ul>
+
+        <h2 id="cost">Cost Of Studying In New Zealand</h2>
+        <p>Tuition at New Zealand institutions usually ranges from <strong>NZ$25,000 to NZ$50,000 annually</strong>. Furthermore, MBA programs are frequently the most expensive, as they are in most other nations. These programs typically cost between $31,000 and NZD 50,000.</p>
+        <p>International students can live on campus in the Halls of Residence at several of New Zealand’s institutions. Besides, living on campus is a very cost-effective choice. The cost of living in different cities can differ significantly, but typical student budgets are manageable with proper planning.</p>
+
+        <h2 id="intakes">Intakes</h2>
+        <p>There are two main intakes given by New Zealand universities and institutes. The two New Zealand intakes available are:</p>
+        <table class="intake-table">
+          <thead>
+            <tr><th>Semester</th><th>Start - End</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>First Semester</td><td>February – June</td></tr>
+            <tr><td>Second Semester</td><td>July – November</td></tr>
+          </tbody>
+        </table>
+        <p>It’s possible that enrollment in vocational programs may open in the months of March, April, and May.</p>
+
+        <h2 id="scholarships">Scholarships For International Students</h2>
+        <p>When it comes to other wealthy nations, New Zealand has comparatively modest fees. Scholarships can be competitive, but some considering leadership potential, study field, and place of origin.</p>
+        <p>Scholarships are available from the New Zealand Government to qualifying nationals of developing nations, sponsored by the Ministry of Foreign Affairs & Trade New Zealand. Our team can assist you in identifying and applying for scholarships that best suit your needs.</p>
+
+        <div style="background:var(--navy); color:#fff; padding:40px; border-radius:15px; text-align:center; margin:40px 0; background: linear-gradient(135deg, var(--navy) 0%, #1e293b 100%);">
+          <h3 style="color:#fff; margin:0 0 10px; font-family:'Playfair Display',serif; font-size:1.8rem;">Get a call-back within 24 hours</h3>
+          <p style="color:rgba(255,255,255,0.8); margin-bottom:20px; font-size:1.1rem;">Eager to study in New Zealand? Our experts are here to help.</p>
+          <a href="contact.html" class="btn-primary-sm" style="background:var(--accent); color:var(--navy); font-weight:700; padding:12px 30px;">Request Call Back <i class="fas fa-phone-alt" style="margin-left:8px;"></i></a>
+        </div>
+
+        <h2 id="visa">Student Visa Requirements In New Zealand</h2>
+        <ul class="doc-list">
+          <li><i class="fas fa-copy"></i> Passport copy</li>
+          <li><i class="fas fa-wallet"></i> Financial proof (Sufficient funds)</li>
+          <li><i class="fas fa-heartbeat"></i> Health certificate</li>
+          <li><i class="fas fa-file-signature"></i> Character certificate</li>
+          <li><i class="fas fa-receipt"></i> Tuition fee payment proof</li>
+          <li><i class="fas fa-envelope-open"></i> University acceptance letter</li>
+        </ul>
+
+        <h2 id="courses">Best courses to study in New Zealand</h2>
+        <ul class="doc-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+          <li><i class="fas fa-code"></i> Computer Science</li>
+          <li><i class="fas fa-ship"></i> Marine Engineering</li>
+          <li><i class="fas fa-microscope"></i> Operations Research</li>
+          <li><i class="fas fa-network-wired"></i> Systems Engineering</li>
+          <li><i class="fas fa-bolt"></i> Electrical Engineering</li>
+          <li><i class="fas fa-vial"></i> Chemical Engineering</li>
+          <li><i class="fas fa-laptop-code"></i> Computer Engineering</li>
+          <li><i class="fas fa-oil-can"></i> Petroleum Engineering</li>
+          <li><i class="fas fa-plane"></i> Aerospace Engineering</li>
+          <li><i class="fas fa-pager"></i> Software Development</li>
+        </ul>
+
+        <h2 id="post-study">Post-Study Work Opportunities</h2>
+        <p>New Zealand maintains a progressive stance for overseas students. After graduating, you will be qualified to apply for a three-year open post-study work visa. During your studies, you can work a certain amount of hours.</p>
+        <p>The visa allows you to stay in New Zealand for up to three years to hunt for employment. You are not limited to a particular job or area and can work for nearly any business due to the open terms of your visa.</p>
+      </div>
+
+      <div style="text-align:center; margin-top:60px; background:white; padding:60px 40px; border-radius:20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #f1f5f9;">
+        <h2 style="color:var(--navy); font-family:'Playfair Display',serif; font-size:2.8rem; margin-bottom:20px;">Book A Meeting With An Expert</h2>
+        <p style="color:#4b5563; font-size:1.15rem; max-width:900px; margin:0 auto 30px; line-height:1.8;">Do you intend to pursue further study in New Zealand? We are available to assist you at every turn! You may arrange a one-on-one appointment to discuss your study abroad choices, costs, and scholarships.</p>
+        <p style="color:var(--navy); font-size:1.2rem; font-weight:700; margin-bottom:40px;">Seize the opportunity to study abroad and extend your horizons.</p>
+        <a href="contact.html" class="btn-primary" style="font-size:1.2rem; padding:18px 50px; border-radius:50px;">Book An Appointment <i class="fas fa-calendar-check" style="margin-left:12px;"></i></a>
+      </div>
+    </div>
+  </section>
+
+    <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo"><i class="fas fa-graduation-cap"></i>
+              <div><span>Gujjar Travel &</span><span>Education Consultant</span></div>
+            </div>
+            <p>Your trusted partner in achieving global education goals. A proud project of Gujjar Travel and Tour Group of Companies.</p>
+            <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>21-C Trust Plaza Model Town Rd, Model Town, Gujranwala</span></div>
+            <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+92 3390414001</span></div>
+            <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>gujjar.travel.and.education.consultant@hotmail.com</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>2026 Gujjar Travel & Education Consultant. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <a href="https://wa.me/923390414001" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</body>
+</html>
